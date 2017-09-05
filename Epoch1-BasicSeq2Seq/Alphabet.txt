@@ -1,0 +1,3000 @@
+H I L
+A C I K
+D F G H J K
+B D E F G
+D E F G I K
+B C I L
+A D E F H I J K L
+A E F G J
+A B C E F H I J K L
+A D G L
+A C D E F J K
+A D E G I K
+A B D E F G H I K
+A B C D E F H K L
+A B F G J K L
+A D E I J K
+A C F H J K L
+B C D G H J L
+B C D F L
+A C H J K L
+A C E I K
+A C F H
+B C E F J L
+A B C E J L
+C F L
+B E F G I K
+A B D E G H I L
+B C D E F H I L
+A C D F H I K
+B D G H J L
+A D F G H
+A C D E F G J K
+C D E I J K
+A B E F J
+A C G H I J L
+B C D G I J L
+A B D E F G H I J
+A D G
+B D F I K L
+C E F G H J L
+A E F G I K L
+B C D I K L
+A B E F G H I J K
+B C F H I L
+A B C F H I J L
+A C E J L
+A D E H I
+A B C D E F G H I
+D F G H J L
+A B J L
+A F H K
+A B C D F I J
+B C F G H I K
+B D E F G J
+C E F G L
+A E I L
+A B C D E H I
+C D E G H I J
+B C D F G H
+D E G H I J K
+A D F G I J L
+A E G H K
+A B C E G H
+A B C D G H K
+A B D E G H
+D E G H I
+C E F H K
+A B H I L
+A E K L
+A B C D E I K
+D E F G K
+B C D G H K
+A C F I J K L
+A B C F G
+A D E G H L
+C D E F I J K
+A B C G H I J K
+C E G H J L
+A C G H I K
+B E F G J K
+A D G J K
+A D E H
+B C D G I
+B E F G H I J L
+A B C F H K
+C H
+D E G H I K L
+A B C D F I L
+C E F L
+B C G I J K L
+A B I J
+A C E F H I
+A B C E F I J K L
+A B F J K
+B C D F G I
+C D E F G I J
+A B E G H J K L
+A B E H I
+C F G I L
+C D E F I J K L
+A B E G H I L
+A B G L
+F G H I J L
+C E F H J K L
+A B E I L
+C D E G I J K L
+A C F G I
+A B C E I
+A C F G H I J L
+A B C F G I K
+A B E H J
+B E F G H K
+A G H I J K
+A C G K L
+D E G I J K
+A B C D E F G H I J K L
+B D E F G H I J K L
+D E G H J K
+C E K
+A F G I J K L
+D J K
+A B E G J K
+A B C F G I J K L
+A B D G H I J L
+B C D E I K
+A B D E F H I J L
+A B H K L
+B F H I K
+A D G H J K L
+A C D E F I J K
+D H I J
+C F G H I K
+A B C D E I
+A B C E F H K L
+A D I
+A E G I J L
+A B G I J K
+F H J K L
+A B C F H K L
+D F H K L
+A E K
+A B C G H I K
+B D E G K L
+A B D E F I L
+A H K L
+B C F G H K L
+B E G H I J K
+F H I K
+B C D F G H K L
+B D E H J
+B E I
+A B F G H J L
+F G H I J
+A E I J L
+A B C D E G J K
+C F H I J K
+A B C D E H I J K
+A D E G H I J L
+B C E F G
+C E G H I
+B C D E H J K L
+A B E F G H J K L
+A D E F G I J K L
+A C D H I J L
+F G H J K L
+G H I J K L
+A B D H J K
+E G I K
+A I J L
+D H J K
+A E F I
+E F H J K L
+B E F H I J L
+A C E F G H I J K L
+B C G H L
+B E G H L
+A B C D E F G I J
+A B C D G H J K
+A B C E H J K
+C E F G I L
+B F H I J K L
+A B C D E G H J
+A F G H I K
+D E F
+B C E G J L
+A B C D F K L
+A C D E F G H I K
+A D E H K L
+A C D H J
+B H I L
+A B E H I J
+B D F G H J
+A B E F H
+A B E F I J
+A D E I K L
+A C E H J
+C D F H I L
+A C H I L
+A B E G H K L
+A B C D E G I J L
+B K L
+B E G H J L
+A B C E G K L
+B F H J K L
+A B C D E F I J K L
+D H I L
+B D F K
+A C F G H K L
+C D G H I J K L
+A C E F H L
+A C G I K
+A B C D G I J
+A C D H I J
+A D H L
+A F K
+A B G H I J K L
+E G K L
+G K L
+B C H J K L
+C D E F G H J K L
+A E F J L
+B D E F G H I J
+F H K
+B D E F G H K L
+A E G H
+A B C F H I J K
+A E F G H I L
+A B E F H I J K L
+A D F G H I K
+A F H I
+A C D G H K
+B C D F G K
+B C D E F I J K L
+A B C E H I J
+A B D E F H J
+A E F H I L
+A D H I J
+A F G I L
+A C D E J L
+C E J K
+B C D E F I
+B E G H I
+A C D I J K
+D G H I K
+A B C F G J
+A B D F G H K
+A C E G H J
+A D I J L
+A B D F G I J K L
+D E F H J L
+A D F G I
+A B D G I L
+A B C E F I L
+A C E G K
+C F G J K
+A D F H I L
+A C H K L
+A C D G I K
+B C D F H K L
+D F I J K L
+C D E F G H I J K
+B I J K
+A B D E F H K
+A F G J L
+B C E F G H I K
+A C E F G L
+B C D E F J K L
+A B C D F H J K
+A D E H I L
+A B C E H K
+A D E F G I J K
+A C G I J L
+A C E F I
+C F J
+A C E F H I K
+B D H J
+A B C F G I J K
+B E F H J K L
+B D J
+D E F H I L
+A B D E F G H J L
+B C D E L
+B C D G H I K L
+A D E F I K L
+A B E F H I L
+A B E F H L
+A C G H I J
+A B G H J
+C K L
+D F J K
+A B D G I
+B C D E H K
+A D J L
+A B G I
+B E F G H I K
+C D F G I K
+A C E G I L
+C D E F G H I L
+A C D E F J
+C E F H I J L
+C D G K L
+C D F H I K
+A B D G H J K L
+B C D G L
+B D E F K L
+A B C H I K
+A B C I J
+A B C E G K
+B C E F I J K
+B D H L
+G H I K
+A B C F G H I J K
+B C D G H I J
+A F G H I J L
+B D H I K L
+A B E F G J L
+B C E H J K L
+A D E H J
+D F H J
+B C F I K L
+A C E K L
+B C D E G J L
+C D E G H J K
+C D F G J L
+A B D H I J
+A C F H K
+B E H I K
+A C E F G H I L
+B D F H I J L
+A C G J L
+D E F H I J L
+A F G K L
+B D E F J
+B E F G L
+A B D G J K L
+A B C E F G I
+G
+A D E F G I J L
+B C D E F G H L
+A B F J K L
+E G H
+A C H K
+E G H I
+A E F H L
+B C E I
+A B F G H I J K
+A B C D E G J
+B E H I L
+G H J
+B F H L
+A B H I K L
+A B J K L
+A B D E
+C G K L
+B C D E F G H I
+E H I
+A C D G I J
+A C E H K
+B C E F G H I J
+A B C E F G J K L
+B C E H I
+E F I K
+B C H I K
+C G H K
+A B E F G H K L
+C D G H K
+D F H I J
+A C D E H J K L
+C G H J K L
+B F H I L
+C D E F H K L
+A B G
+D G I J
+E H K
+A B D I J K L
+B D G H K L
+A D E F G I J
+B E G I J
+A C F J L
+B C D F I J K L
+A B D E G I J L
+A C E F G H J K
+E F G I L
+A E G I K L
+A B G H K L
+A B C D E H K L
+A D E J K L
+A F G H J
+A D E H I K L
+C D G I J
+A B C E F I K L
+C D I K
+A C G I K L
+B C G I K
+B C D G H
+A B C E H I J L
+A C F H I
+A B C E F G J K
+A B C E F H I L
+A D E G J K
+A B C F G H J K
+C D I L
+B D E H J K L
+A B D H J
+H J
+A B C D F H K
+A B C D H I J K L
+A B D E I J
+A B D E F G H I
+C D F G H I
+A B D H I L
+A C F G H I J
+B C E F G J
+C D H I J K
+B C D E G H I J K
+A B D F G H I J K L
+B C D G I K
+C D E F H J K L
+A C E F G K
+B D E H I J L
+A C E F G I J K
+C D H
+E I J L
+B C E G H I L
+C D F G L
+A B I J K
+A B C G L
+C E F G H K L
+D E F G I J K
+B D E F H I L
+A F G H K
+A E G H I
+B E F H I K
+B D F H I J K
+F G
+A B C K L
+A B C E G J K
+C D E H J K L
+A D G I J
+D E F G
+A C E G H I K L
+B E F G J L
+C F H I
+C F G H J K L
+A E F H I J
+A B C I K
+A B H I J K L
+C G I J
+A B C E I K L
+A B C H J K
+A B E H K L
+C D F H I
+C E G H K L
+A B F G H I L
+A C D J
+B C G H I J K L
+B F G H I J K L
+A C D E F J K L
+B C G H I K L
+A C F J K
+B E G K L
+E F J K
+B G I J L
+B H I K L
+A E F G
+A I L
+B D F G J L
+A D E G H I J K L
+B C E G H K
+B C D E F J
+C E J
+A C D G H J K L
+A B H I J
+B C J K L
+D E K L
+A B C F G H I J L
+A C F G H I J K L
+B C D F G H I L
+A C D G K L
+A C D F G H I
+A D E G J K L
+A B C D F G H J K
+D E I L
+C D F G H I J K L
+A B C D F H I K
+A E G I J
+A B C D E F H J K L
+A B D E F G H I J K
+A C D E J K L
+B C D F J K L
+A B C F H
+C E F H I L
+E H I L
+A B D H K
+D G H K
+A D F H J K
+A D I L
+A E F I J K
+C I L
+C D E F
+D F H I J K
+A G I
+A B C E G H K L
+C E G L
+D E F H I J K
+A D H I L
+B D I J
+A C I
+A C E F G H K L
+B E G H I J K L
+B E L
+C E F G H I
+B D F
+B C D E G H J K
+C E H K L
+B C G J K L
+A E G H I J L
+F G I J L
+A D F G H I J K L
+A D E H J K
+A D F H I J K
+C D E G I K
+A D F H I J
+B E I K L
+A B C D E J K
+C E F G H I J K
+C D E F I L
+C D E F I K L
+B C D E G H
+B C D E F G H I K L
+A B C J L
+A B D F H I J K
+C E H K
+A C E F G H I J
+C G K
+C D G H K L
+C D E G I
+A B D E F I J
+D E F G H I J L
+B C E K L
+C E L
+A B C F G I J L
+B C D J L
+A G I L
+G H J K L
+C J K L
+F H
+D E H I J K L
+E F H I J K
+A C E G I K
+A C D F G I K L
+B C H L
+A B C E F J L
+G K
+F H I J K
+B C F H L
+E F K
+A C D F K
+D E F J K
+A B G H I J K
+A C E F H
+B D E G H I L
+B C E F H L
+C D H J L
+D E F G I
+B E F H I J
+A D E F H J
+B D E H
+B D I J L
+D F H I K
+C E G K
+A B C D E H J K
+A E H I J L
+A D F G H K L
+C D I J
+A C D E F G I L
+B F G I J K L
+A B C D E F K L
+A C F I
+B F J K
+A B C D F J
+A B D G H L
+D E G H I J L
+A B C D E H
+D E F G I K L
+C D E F G H K L
+A B D E F G H I J K L
+A C E F G J K L
+A B C D E F H I J K
+A F G I J K
+A B I K
+B D E F H K
+D G H J L
+A C G H I J K L
+A B C D I L
+C D E H J K
+A E F G H J K
+B D F H J K L
+G H I J L
+B F I K
+C E F H J K
+A B C F G K L
+A B C D E H J K L
+B C D H I L
+F H I L
+A B C D E F G I L
+E F H
+B C E F I J L
+C G J
+B C E I K L
+A B E I K L
+A B E F G H
+B C F I J L
+A B C D E F I L
+A B C E G H I J K L
+B C E I J K L
+A C G H L
+C D F G H I J K
+A B D E H I L
+B C D F G
+B C E F I K L
+A D E G H I J K
+A B D E H I K L
+C D E G J
+A E F H J L
+B F G H I J L
+A D G H I K L
+A B E G I L
+A B D E F G I J K
+C E F G H
+A E F G I J
+A C D E H J
+B D G I K
+A D E F I J K L
+A D G I L
+A D E G J L
+A D E F H J K L
+C F G I
+A I J K L
+A B F H L
+A C E F G J L
+C G
+A D F I K L
+A C E F J L
+D E F I K
+D E J
+B G H I J K L
+C E I J K L
+A B C D F I K
+J
+E I L
+E F H I J K L
+A B C D E F G H J K L
+A C D E F G H I L
+C D E F G H I J L
+C D F H K L
+B C D F
+A B C I J K
+A D E G I
+B C D E H I J K
+A B C E F G K L
+C G H L
+B D E G I J K
+A B E F J K
+C D F H I J K L
+B F G H J K
+A D E F G J K L
+B E H J K
+B C D E G H I K L
+B C F G I K
+A E F G I K
+A C D E F G H I J K
+A B C E F G H J L
+A B C D E F H I J L
+B C D E F G H I K
+B F G H I L
+A B D G H I
+B D G H K
+A B D E F G H I J L
+A D E G I L
+A D E H I J K L
+A C E F H I J K
+A B C D E F H L
+C D E K L
+A F H J K
+A C I J
+A B C E F J K L
+B C E F G I J L
+B I K L
+B E G H K
+C D
+H I J K L
+A C E F G H I J K
+A D G I J K L
+A B C F G H I L
+A B C J
+A B C D I K L
+A C E F G H L
+A B C G
+B C D F H I J L
+A F H J
+A B D G I K L
+C H J K L
+A B C E H I J K L
+A B F H I L
+C E F H
+B E G J K
+A D I K L
+C G L
+A H I J K L
+C D E F I
+A B C E F G H I J K
+A B D F J K
+A B F I L
+A C E G H I J K
+A B C D E F G I J K
+A B C H I J K L
+C D E F G H I J
+A B C E F G L
+A D E G H K
+A B D E F H J K L
+A B E G I J K
+C D E F G H K
+A D F H L
+E H J L
+L
+E F I L
+B C D E F H I J K
+A C F G H J
+B C E G I L
+C D E G H K L
+B C E F H I K L
+D G J
+E G H I L
+B C D E G I K L
+A B C E F I K
+G H K L
+A F H J K L
+A B D F G H J L
+A
+A C D F J K
+A F G H I J K
+A B F H J K
+A B C D E I J K
+B C D E F G H I J L
+C D E F G H I K
+A B C E F G H I J L
+A B D H J L
+A C D E H
+C D E F G H L
+A B E F G I J K L
+A E G H I J K
+A C E H I J L
+B D K L
+C E H I K L
+D G
+A B C E I K
+B E G L
+A C E F I J K
+D F G I K L
+A B F H K L
+B C D E F G I
+C D G H I
+C D G H J K L
+A E H I K L
+A B C H I
+B C D E G I L
+B C E F G I
+A C D E F I J K L
+A D F I J L
+C E G J K L
+A C E H I J K L
+A D E F G J
+C E H J K
+A B C E F H J
+B F G L
+D E F G H I J K L
+F G I J K
+A C F H L
+A F J
+A C E G L
+A B C D H I L
+A B C E H J L
+A B C G I
+B D E G I J K L
+A D G I K
+A C D E F G J
+C D F G I J K
+A C D F G J
+A C D E H K
+A D F G I K L
+A G
+A B G I J L
+A C D J L
+C D E F G
+G J
+B C D E F G H J K
+B G I L
+A H I L
+B C D E F K
+C D F K
+B E G H J K L
+A D F H
+A D E G I J K
+B C H
+A C E F H J K
+C D E F G H
+B H K L
+E H L
+A B D E F G K
+E F
+C J K
+A B E G H L
+C F G H J
+A C H J
+B E G H I L
+A B C E F G J
+A B C D E G I K L
+A C F G H I J K
+C D F G H K L
+B C H J K
+B E F H K L
+A C F H I J K
+A C H J K
+A H I K L
+G I J
+F J
+A F G J
+C D F I K L
+A B C E F H L
+A C D F I K L
+B H J
+F G H J K
+A G H I
+A C D E F I K
+C D F I J
+B C D I J
+B C E F G I K
+B D E G J L
+D G J K L
+C G I J K L
+B E I K
+C F G H K
+A B C D E F G I
+B D F G I
+A B E F K
+C G H I J K L
+A B C E F G H I K
+A B H J K L
+E F J L
+A C D F G H J L
+A K
+A B E J K L
+B E F I K
+A B C D G H I J L
+A B D F K L
+A G H I J L
+C D E F I J
+A B D F G H L
+A D H J K L
+B C F G
+A C E F I K
+B F H J K
+B C F K L
+A B F G J L
+A B C D G H I K
+E F G
+A B D H I
+A D E I L
+A D G H
+E G I J L
+A C E G H K L
+A B D F H I K L
+B C F H J K L
+A C D E F H I L
+D E F G J K
+C F H J K L
+A B C G H L
+A B F G H I
+A F I K
+A C D H I L
+A F I J
+D E G I
+A B C E F G H I J K L
+A B D F H J K
+A G J
+B G I J K L
+C E F I J K L
+A C D F
+A B C D F G H J
+B C F G H J K L
+B C G K
+A B C D E F G H I K L
+A B C E F G H J
+A E F G H K
+A B C D E H I J K L
+C D F H I K L
+C F I L
+A C D E F H L
+D E F H K
+B C F H I J L
+C F I
+B C H I
+A B D E F H
+A C D F G J K
+B C E G I K L
+B C D E F H I J K L
+B C E F H J
+A B C E I J K
+A D G I J K
+A B C D E G J K L
+C E F J K L
+A B E G H I J
+B I J K L
+A D F J
+A B F K
+A E F H I J K
+B D E G I J
+B C D G I K L
+A B D G H J L
+C E F G H L
+A C D K L
+B H J K L
+A C E F H I J K L
+C D G I K
+B E F I K L
+A C D F J L
+A D F H J
+B C D F G I L
+A B C D H I K L
+A B E G I J L
+A B C D
+C E F I K
+A E F G H I J L
+A B E F G J K
+A B D F I J
+E G H I J K
+B E F G I
+A D E F G
+C F H J L
+A B C D H J L
+A E H J
+A B D E L
+B D E H J K
+D E F I J L
+B C D F I K
+A C D G I K L
+E F L
+A B E F G K L
+C D F H K
+C D E F J K
+A B C G H
+A B C D F J K
+A C D E H I
+C D E F H L
+B E F G H
+D F G H I J L
+B C F G J
+B C F G H I
+B C D G
+C D F L
+A C D E G H I K L
+B F G H L
+D G H J K
+D J L
+A C D E F G H K
+D G H I J K
+B H I
+A B C D G J L
+C D H I J K L
+A E G I L
+D H I J K L
+B E G H K L
+E I K L
+A C E F I J L
+B C F G I L
+B G H I K
+A B D F G
+A B D F H J L
+A F L
+B C D I J K
+B C G I J L
+C H L
+A C E F K L
+A F
+A B E F G I J K
+A B C D E F H I
+A B D E F H I K L
+A E G H I K
+B C D E F G I J L
+B E F G H I J K L
+A B D E F G H L
+B C G I L
+D F G H I K L
+A B D E G I K L
+A B C F I L
+A C D E I L
+C D I J K L
+B D E F I K L
+A D E F H I J K
+A C E
+A B F
+A D E F H I
+A C F G H J K L
+B C D E G I J K
+B D E F H I J K L
+A D E F H J L
+A C D F G
+E F G J K L
+A B E G L
+A B C D F
+A D F
+A C D E G K
+C D G I J K L
+A C D E F J L
+A B C E G I K
+A B D F G H I
+A C D E G H I J K
+B E F I L
+B D
+B C D H K L
+D F J
+C D E F H I
+B E G I J L
+C D E F G H J
+A B C E G J
+B C E F H I L
+A G H L
+B D G H I J
+A B E F G
+A C E F H J
+A E F I K L
+A E F K
+A B C F G H I K L
+A C D E G J L
+A B C D J K
+A C F G
+A E F G I L
+B D E J K L
+F
+A D G H J L
+A B C E F G H J K L
+A D J K L
+A C D G H I L
+C F G H K L
+B C D E F G I J
+G H L
+A B C G H I K L
+D J K L
+C D K
+A B F K L
+A B D G H I J K
+B D E F G H I K L
+B H I J L
+A B D F I J K L
+A D F H I J L
+A B D E J
+C D E F H I J K L
+A B E F I K L
+A B D E H I K
+B D E F J L
+B D E F I J K L
+A B E F G H I K L
+B E F I J L
+A E I K
+A B J K
+A B D E F G H J K L
+A B D F G H K L
+A C F I J K
+A B C D H I
+A D F H K
+A B E F H J K
+B C D F H I K
+D H J L
+F J K L
+A B C D G H K L
+A D F J L
+A D G H K
+B D G H J K
+A B C H L
+A D F G I K
+A D E I J
+A C D G H J L
+A C D F I K
+C E G I J
+A D F J K
+A C E F I K L
+B D J L
+B C E F H K L
+B C E F H
+E F G I J L
+A C D H L
+C D F J
+A E H I K
+A B C E F H J L
+A C D E F K L
+C D F
+J L
+A B D G J
+C D F G I J
+A B C D E G K L
+C D F I
+C D F G H I K
+A C D E I J K L
+A F G
+B E F G K L
+A B C D E G H I J K L
+A B C D G L
+A B C D H
+A B E G H I K L
+A G J K
+C H I K L
+A B E G J K L
+B C H I K L
+B C G
+B C E F H I K
+B E F
+B C D E F G H J
+A C D E F G K L
+A E F H I J L
+E F G H J
+A G I J L
+A B D F G H I J K
+A B F G H I J
+B C F H I J
+B D E F I K
+B C D E F I L
+B D F G K
+A C D J K
+A G I J K L
+A C D F G J L
+A B C D E F L
+C D F G H I J L
+B C D G H I K
+B G H I L
+B C F I J K L
+B C D E F I J K
+D H I
+B D I K
+A C D F J
+A B H J K
+B D G I L
+A B C F G H I
+B C E G H J
+A D F H J K L
+B C G H I J L
+A B E F G H I J
+B G H J K
+A C D F I L
+B G J L
+A B C D H I J K
+A C D E F G H J
+B C D F G H L
+A B D E G I K
+C E G H I J
+B F G I K L
+A B E F H K
+A C D F G I J K
+B C F G K L
+A D E F G H J K L
+A D F H I J K L
+A B D F H
+E F H I K L
+B C E G H J K
+A B G I J K L
+B C F J L
+B C F I J
+A D E F J L
+B D G I J K L
+A B D F G H I K L
+A B C H
+A B D G K L
+C D E G J L
+B C F H K L
+A F G H J K L
+A C D E G I J L
+B C D E F H J L
+A C E J
+E F G I J
+C D G H I K
+C J L
+A C E F G H K
+A E F H K
+B D G H I K L
+A B C E F G H L
+A C G J K L
+A C D E F G J L
+D E I J K
+A B C E F G J L
+C E F I
+A C D E F G H I J
+B C K L
+C D E F G I L
+B D E G H I J
+A B C D E F G I J L
+C F G H L
+D F G H I L
+A B F I J L
+B C F H J L
+A C H I K L
+A F G I K
+A C D G K
+C F J K L
+B C E F G H K
+A D F G H J K
+E F G H J K L
+A B D F H L
+B C F G H I K L
+A B C D F H J L
+A B D F G H I K
+A G I K L
+A E G K L
+B C D E F I J L
+G H I L
+B C F H J
+C D I
+C D E G I K L
+B C F G H I J
+D E J L
+B E F I J K
+A B G H I L
+E F H L
+B C D K L
+B F I K L
+A B C D G H I J K L
+D F I L
+A E F G H I K
+B C D E F G H K L
+C H I J K L
+A C D E G H J L
+A B C D E G I L
+B D E H L
+C D F I J L
+A B H L
+B C D E F L
+B E G J K L
+D G K
+C D H J
+D E F K L
+E G I J
+B D F L
+A D E H I J K
+C G I J K
+B D H K L
+B G I K L
+A B C D E F H I K
+A F J L
+C F G H I L
+A C I J L
+A C D E G I
+B D G K
+D G I J K
+A C D H J L
+A E F I J K L
+B C D E G
+A E G I J K L
+B D E F G I J
+B C D F G J K
+C D E I J L
+A E H K
+A B C H J
+A D I J K
+B E F G I K L
+A D E F G H K
+C D E J L
+B D H I J
+A B C D E G L
+F H L
+A B C D F I J K
+A B C F G J K
+A B G H I J L
+A C F H I K L
+A D E K L
+A B C G I J
+B C F I J K
+A D E F G H J K
+B D E F H L
+C D E G H I J K L
+D G H I J L
+A D E H J K L
+E J K L
+A B E I
+B E I L
+A B C E G H I
+A B C E F I J
+A B F G I L
+A K L
+C D E G H J L
+F G H J
+B D E F G I J K L
+C E G J K
+A B E G I K
+F G I K
+C F K L
+C E F G K
+B C D E H I K L
+E F I J
+C F G H I J
+A B D E G J K
+A D E F G H I
+A B D E H I J K
+A B E G H I J K L
+A D F G H I L
+D F I J L
+F G I L
+C F I K L
+B C D G I J K L
+A B D F G I K
+I K L
+B D E I K L
+C L
+D E G I J K L
+E J L
+A C D F G H I K
+A B C E G
+A E F H
+B C D G J
+C E G H I L
+A B C E L
+B C E H K L
+C F G H
+D F H J L
+A B F H K
+B C D E I J K L
+E F G J K
+A B G H I
+D E L
+C I J
+D I K L
+D F G H I
+D E F H J K L
+B C D F G H I J
+C F I J K
+A B C I K L
+B F G H
+B C D E G H L
+A C D H J K
+D G I
+A E F G H I J K
+C H J
+A B C E
+A E G J K L
+C H I L
+C D G I K L
+C D E G
+A C E F I L
+A G H I L
+A B D G J K
+B E H L
+A B C H K
+C E F G I K
+A B D F G H I J L
+C
+A B D E G K
+C F G J
+D I J
+D F G K L
+A E F G H J
+B C F G H J K
+D E F G H L
+A E G J L
+D E F H I
+C G H I K L
+B C D F G H I K
+B D E G H
+C D H I L
+A B C D E F G K L
+A D F K
+A C E F H K L
+A C D H
+A C E G H J K
+E G L
+A E J K
+A B D F H I J
+B C E H I J K L
+B C L
+B C D L
+C D E G K L
+A B E F G I J
+E J K
+B D H J L
+A F J K L
+B C D F G H K
+A B C E F G H I L
+A B F G I K
+A B C E H I
+A B D J K L
+B D E F G J K L
+A B D G H J
+B F H I J
+B C G K L
+D E G H
+A G K
+A C F G I J
+D F G I K
+A B E G H J
+A B D
+A E G K
+A E F H K L
+C E G H J K
+A B C F K L
+D E G H I L
+A E F I K
+C F G H J L
+B C E F I J K L
+E H J
+B C E F I J
+C D E F J
+B C D G H K L
+C E H I K
+A B C F H J K L
+A B C G J
+C G I K L
+A B E G I K L
+B C D G H I
+A B C D E F K
+A D E F G K
+A C E H I J K
+A B C D E G J L
+B C D F K L
+D K
+A B C E G H I K
+A C I J K
+B D E F G I K L
+A B C D F H K L
+E G H I J L
+B D H I K
+B D G H
+B F G I
+B C F G H I J K L
+B E F G H J K
+A E J L
+A C D E J
+A B E H L
+F G I K L
+B C D E F H J K
+B E F G I J K L
+A D E
+A C E F I J
+B G H I J L
+B C F G I J K L
+A B C F G H I K
+A F G H K L
+A B C E F G I J K
+B D F G H
+A C D F H I L
+C E G H I K
+C E F H K L
+A F G H L
+A B C D E F G J K
+B F G I J
+A D H
+E F H J
+A B D F I J L
+A F G H I J
+A B C G I K L
+A B D E F L
+B D F G H K L
+A B D F G H I J
+H I K L
+E G H I K L
+C F G I J L
+D E
+A C H
+A C E G H
+B C D E H J K
+B D E F H J K L
+D E F L
+A B E F J K L
+A B D F H K L
+B C D F I J
+A B C F K
+C E F
+A B C E F I J K
+A C E L
+B D G J K L
+B E F G H J L
+B C D E F H J K L
+A B C G H J K L
+B C E F
+C D F H J L
+A B D E F
+B E H I J
+A C D F G L
+A B C E H I K
+B C D G I L
+B D I K L
+B C F G H
+A G H I J
+B D F G H J K
+D F H I K L
+A D G H J K
+B D E G I L
+A B C E G I J
+A B C D G K
+A F H J L
+A C D E I K L
+B C E H I J
+B C K
+B E F I J
+A B C E F H I
+A B D E F H I J K
+A B F I J
+B H
+A C D E F G H L
+C F G H J K
+A D
+A C F G H I K
+A C E G I J K
+B E F H I J K L
+C G H I J
+A B C F I K L
+C D E F K L
+D G H J
+B E F J K
+A C D E F I L
+B C D E H
+A B D E G J K L
+A D H I K
+A B D G H I K
+F G K L
+A B C D F G K
+B C D G H I J K L
+A B D E G L
+A B C G H I J
+B C E G H I J K L
+C I K L
+A B C D F G I J K L
+A C D E J K
+B D G H I
+A E H I L
+C D G I J K
+A D F G
+A B D E F G L
+D E H J K
+A B F H I K
+A E H L
+A C D E H I K
+A B F G K
+C D E F H I J
+A C D H K L
+A B E F G H I K
+B C D I
+C D E G H J
+A B E H I K L
+B C D E F G J K
+B C D F J
+C E F G H I J K L
+A B F I K L
+B F G K L
+A D E F I J
+D F G L
+B C G H J K
+A C G I J K L
+G I J L
+A C G H I
+F G H L
+A D G J
+A B D E F H I J K L
+A B F I
+A J K L
+A B C D E I J L
+A B C F G H L
+C E F H I J
+H I
+A C D G H J
+D G H I
+B D G H I J K
+C D E F H I J L
+A B D F J L
+C H K L
+A B E I J
+A B D I K
+A C E F G K L
+B C H I J K
+A B C F G I J
+A C D H I K
+A B C D G I J K
+A B C E F H J K L
+E G H J
+D E I J
+A E F G I J K
+C D E H J L
+B C D F J K
+B D E F G H J L
+B G H J L
+C G I
+A B D H K L
+D E I K
+D F G H L
+A B C D E G H J L
+B F I L
+C E I J
+B F J K L
+A F G H J L
+A B C F G L
+A C F G L
+A B C D F G I J L
+A B C D G H L
+A B C D E I J
+B C F G H L
+B D F H I K L
+E F G I K L
+A B C D F H I J L
+C D G J K
+C H K
+A D F G I L
+A C D E F G I J K
+A D E H J L
+A D F H J L
+A E F G H
+A C D E G H I
+E F G H K
+A C F G J K
+C D E G I J K
+A B D F
+D E F H I K
+A C F H I L
+A D F H I K
+A B D E G I J
+B C E G H I J L
+B C D K
+B C F G I J
+A B C D E F G J L
+A B E H
+A B G I K L
+C D E F I J L
+C E F G H I L
+B D G L
+A B C H J K L
+A B C D G H J
+B F K L
+B D E K
+A C D F G I J L
+B C E F G H I J K L
+C G H I L
+A B D E G J
+A C E F G H J L
+B E H I
+B C E F G I J
+C H J K
+B D E I J K L
+I J
+A B C E F G I L
+A B E G K
+B C D E G H I J K L
+A C E I J L
+A B C K
+B D E G H I J K L
+E G H J L
+F G L
+D E G K L
+C D G H I K L
+A B F H I
+B D F I L
+A E G H J K L
+D G H L
+B C G H
+B C H K L
+A B C D E F H I K L
+B C D E H I K
+A B F H I J L
+C E F G I J K
+B E I J
+A D E G J
+A B C D F G H J L
+B J K
+B C E K
+A B C F G I L
+C E K L
+E K L
+A B D F G L
+A B C D H I K
+C D E G H J K L
+A C D E G I J K
+A D E F H K L
+A B D E H K L
+A C D G H J K
+A E L
+B C D H I J L
+D F G H
+A D F G J K L
+B C D E F G J
+A B C D E F G H J K
+A B F H I J K L
+B E H I J K L
+C D F J K L
+A B D F G K L
+A C D E H L
+B C D E F H
+B D G H J
+F G J K L
+A C G J
+A B C D F H I J K
+A B D F G I L
+B E F G K
+D E J K
+A G H J
+A C D F H J
+C E G H
+A C D G L
+A B D E F J K
+G I L
+F I J K
+A C D E F G I
+A D F H K L
+B I J
+A B C D F G I J K
+E F G H J L
+E K
+C D E F H I K
+E F K L
+A G K L
+A D E F G H K L
+D F I K L
+C D E F H K
+D I J K L
+B C E I J L
+A B C D E F H J
+A E F G H I
+A B C E F H K
+D I
+B D F G H I
+C E G H J K L
+A D F K L
+B C E H I K
+A C F H I J
+B E H J K L
+B C D G K
+B C E G J K
+A B D E G
+C E H I
+B C D F H J K L
+D G I J K L
+C D E H L
+B C D E F G H J L
+B C G I K L
+A D F G H I J K
+C D G
+A B D E F H I J
+B C E G L
+C D G K
+E F G H I J L
+A C D G H I J L
+A B D E F I J L
+D E H K
+A B C E G I L
+A E G H K L
+D E G J K
+B D E G I J L
+B E G H I J
+B C D E K
+A E I
+E F J K L
+C F I J L
+A B C E F L
+A D G K L
+A B D F G H J K
+A B C F G K
+A C D F H
+E F I J K
+B C G H J K L
+E F G I J K L
+J K
+B C E F J
+A B E G I J K L
+C D E F H I J K
+B D E F I J L
+B F H K L
+B D E F G H K
+A E G I
+F I K
+A B C D H I J
+C G H J L
+A B C D F G H
+A B E G I J
+B D F H L
+C E F K
+C D E G H L
+A C D F G H I J K L
+A B D F H K
+E H I K L
+B D F G H K
+A B E F
+A C D F G I
+E F H I L
+B F I J
+B C E F I L
+B D F G H I K L
+B C F G H I J K
+A F G H I J K L
+A G H I K
+C F G J L
+A B H
+A C D F G H
+A B C D E F G H J L
+B C E G I J
+A C E G H I
+A C D E F G H I K L
+A C E G H I L
+C H I
+D F G I
+B D F H I L
+A B E F J L
+E H J K L
+B C I J K L
+A B C D G I J L
+A B D E G H I J K
+A B F G K L
+A B F G I J K
+A D F G J
+C D E L
+C E I J L
+C D G H I J K
+A G J K L
+B C E G K L
+A B C D F G H I
+C D G H L
+A D E F G I L
+A B C L
+J K L
+E F H J L
+B D E F G H I K
+B F G I L
+A B E F G I J L
+A C D E F G H J K
+C D E F G J
+A D F I
+D F G K
+B C D F G I J L
+A B C E G L
+E G H I J K L
+C D F G H L
+A B C F H L
+B C E F G J K
+C D H J K L
+B C D E G J
+A B C F G H K L
+C E I L
+C E G K L
+B F G H K
+A C E H I
+A G I J
+A C I L
+A B D E F G H
+A B C E G H I J L
+E H I J L
+B C H I J K L
+B C H I J L
+B C D F I K L
+A B I J K L
+A C J
+A E
+C E H J L
+A E I J K
+A C D E G J
+D F H K
+B C E G H I
+D E G I K
+B D F H J L
+A F H
+C F G J K L
+C D E H I J K L
+C G J K L
+B E F G H J K L
+C D E H I L
+B E G H I K L
+A C D F H J K
+A C D E F G I K L
+A B E F G J K L
+A D E F I J L
+A B D E F H I L
+C D F G H I L
+A B E F G K
+A B F G
+A B D E G H I
+B C I
+A B C D E H I L
+B C F
+D F I
+A C F H J L
+A E I K L
+A B D K L
+C D E G H
+B D E F H I K L
+A E F G H I K L
+A B C
+A B D I L
+A B D F G J K
+D E H J L
+B E F G I J K
+A D E G H I K
+A B F G I J K L
+A C E F H J L
+C F J K
+A D G I
+C D J K
+B C D F G I J
+A E F I J L
+A C E G H J K L
+A C G L
+C D E H J
+A F G J K L
+B E H K L
+D E G H J K L
+B G H J
+A B C D E F H J K
+A C D G I J L
+A E F L
+A D E G I J K L
+C E G I K
+A B C G K
+C F G
+E F G H J K
+A C D F I J K L
+A C E G
+A C E I J K L
+C F K
+B D G H L
+B C E F J K L
+B C D F H K
+A B D E G H I J L
+A B E G
+A E J
+F G H K
+A B C D E G H J K
+B C D E G H I L
+C G H I
+C E H I J L
+B C D F I J L
+B D H I L
+A C D E F H I K
+A F G K
+C E G H I J K
+B E F G H I K L
+D G H
+B E H I J L
+D F G J
+B D E I J L
+A C F G I J K
+C D H K
+A C E I J
+B E J
+B C
+A B E G H J L
+A B C D E F H I J K L
+D E G H I J
+B D E F I
+C D G I L
+A D E I J K L
+D E H
+A B D F G J L
+A D E I K
+B D G I J L
+A D E F G H J
+B D F H K
+B E G I
+B C D E F
+A B C E H I J K
+A C D E F G H I
+A B K L
+A C F I L
+B D E F G H J
+A F H I L
+A B C E G H L
+C E G H L
+B C D H I K L
+B G H J K L
+B C F J
+A B G J K
+B D E F G I
+D F H J K
+C D E H I J K
+B C D E G I J
+F H J L
+A C D I J K L
+B D E F H I
+D F G H K L
+A B F G I J L
+A B D F I L
+A C H I J K
+A B C D G H
+H L
+C D H I K
+C D E F G J K L
+A B D E F G H J K
+B E G H
+A B D E F H K L
+B H I J K L
+B H I K
+A B E H J L
+A D E H I K
+A B C D E G I K
+E F I K L
+B C E F G J L
+A D F I J K L
+A C D E I J K
+A C E F G H J K L
+A B D F I K
+B C D F G H I J K L
+D E F G H I
+C D F H I J K
+A B F I J K
+B C D E H L
+E I J
+C E G J L
+B H L
+A B C D E K
+A B C E G H I J K
+A B D E G I L
+C D E F K
+A J
+B C D E F H K
+B C D E H I J K L
+B D E G J K
+A B D F H I L
+A B C D F G J
+A B F G H I J K L
+G I
+B C D E G K
+E F G H I
+A B F G J K
+C E F G I J K L
+B C F G I J L
+A B C D F J L
+C G H J K
+A D H J K
+C D F G H J K L
+A C D F I J
+D E F G H I J K
+B D E F G L
+B C F G J L
+A B D E F H J K
+D E G H I J K L
+B C F G H J L
+B D E G K
+A B D E F G K L
+C D E F H J
+C E H I J K L
+B C D F G L
+A B E F H J
+A G H I K L
+A B C D F H I L
+A C D E F G H K L
+B K
+D F G
+A B C D E G
+B L
+A D E F H I K L
+D H K L
+B D F H J
+C E F G I
+A B F J
+A B E H I K
+A B D H I J K
+A B C G J L
+B C D F H J
+A B C G H I
+A B C E H L
+C E F H I K L
+A C D F G H I K L
+A C D L
+A B G H I K L
+A B D G I J
+A B C H K L
+B D E F G I K
+A C F G H L
+A B D G H K L
+A C E G J K L
+A D G H J
+D E H I K
+H J K L
+A C D F G H I J K
+A E F G H L
+E F H J K
+B C D H K
+B C E F G H I L
+B C D E I L
+B C H I J
+C D E I K L
+B C E F G H
+A B D F G H J
+B C E G H I J
+A E F H J
+B E F H I L
+C E G H I J L
+B C D G I J K
+A B C E F G I K L
+D E F G I J L
+B C F G H K
+A C E H I K L
+B E F J K L
+B C E L
+B E G I J K L
+A B C D E F H I L
+C F G H I J K L
+A C F H I K
+A B E G J L
+B C D E G H I
+B D F G I J K
+B D G H I J K L
+A D E F L
+B D E J L
+A B C D H L
+A B F H
+A B E F H I J L
+B F G H J
+B F I J L
+B C E F G H J L
+A D E F G H I J L
+A C E F G H J
+A B E G H
+B C I K L
+A D E G H I K L
+A F H I K
+D E H J K L
+E H J K
+B C D E F G H I J K
+A B E F G I
+A B C F H I J
+A B C D G I K
+B D E F G I J K
+B E H I K L
+A B D E F H L
+E G H J K
+A J K
+A C D E H I K L
+A C G H J K L
+A B C D E F I K
+A B D E F G I K
+A D G H I J L
+K L
+A B E I J K L
+B D E F G H L
+A B C D E F G H J
+B C D I J L
+B C D G H I J L
+B D E G J
+A D E G H I
+A B C D I J L
+A B C E G I K L
+A B D E F G H K L
+A E F G H I J
+D E G H J L
+B G H I J K
+C D F G I J L
+C D F G I L
+C D F G H I K L
+B C D F H I
+A D F H I
+D E F H J K
+A B C D G J K L
+C F H I J
+A C F I J
+A D F L
+B C D F G H I J L
+A B C D E G I
+A B G J K L
+B C D J K
+A B D E K L
+A F G I K L
+B F J
+D H J
+C E I K
+B E G I L
+A D E G H J K
+A C E F G H I K L
+A C F H J K
+B H J K
+B F G H K L
+A B D H L
+A B C F G H J L
+C E F G
+A B D E F G I K L
+A B C D E G H K
+A E F G H K L
+B D F G H I J
+B C D G H J
+A C I K L
+A C D E G H K
+B D F G H I L
+B C D I L
+A C D E G K L
+B C E F G I J K L
+A D E F I K
+C E G I J L
+B D F H J K
+B C E F G H I K L
+F H I J L
+B E F G J K L
+A B H I J K
+B J K L
+A B C E G J K L
+A G H J L
+A B C D E
+B C E I J
+D E F G H I K
+C G H J
+A B G I J
+A B C D G J
+A B C E F G K
+D E F G L
+B C E G H J K L
+A D J
+B F G J K
+A C D E F H J K L
+A C F G J L
+A D F G I J
+E G I L
+B E F H L
+F I J
+A B C D E F J K L
+B C D E F G H I J K L
+C D G I
+C E F G J K L
+A C E F H I K L
+C D E F J L
+F L
+A B D E G H I J K L
+B D E F G H
+B D I J K
+A B D J L
+A B C D E H I J L
+A D E F H I K
+A C F H J
+B F G I J L
+B D E H I L
+A F I J K L
+B C D F H I J K L
+E F G L
+F G I J K L
+B D F G I K
+A B C D F G H J K L
+B E F I
+F G H K L
+A B C E F H I K L
+A C D E G H K L
+F I J L
+B C D E F G K L
+A B C F I J
+A D E L
+A B D E H I J K L
+F G H
+A D E G
+A C D F J K L
+A C K
+A C D E H J K
+B D H I
+A D K L
+A B D E G I J K L
+B C E F H I
+D E G K
+A B F G I K L
+H I J K
+C D F G J K L
+A B C E F G
+C E H
+B D F G H I K
+A B C E I J K L
+B D F G H I J K L
+B C E F G H J
+C D F K L
+A D E F I L
+A C D E I J
+A B C D E H I K L
+G L
+A B E F G H J K
+A E H K L
+E F G J L
+A C D E F H J
+F G I J
+C F G H I
+B D F G H L
+A B D E F G I
+B C D F H I J K
+B J
+A B C D F H J
+A C D E F H
+D F I K
+B E F L
+A D E H I J L
+A C D E G I L
+A B D F G I J K
+B E H J
+A B C E F H I J K
+B C E F G H I J L
+D F J K L
+E F H I K
+B C E H I K L
+A B D F G I J
+A C D K
+A B C F G H I J
+B D E G H I J K
+C D F G H J L
+C E G
+A E F H I J K L
+B C F I
+A F G H I L
+A C E G J K
+D E F G H K L
+A C D E F G
+A B C E G J L
+C D J L
+A B E F G H I L
+B C E J
+B C E G J K L
+B C D F G K L
+B D E F I J
+A B D F I K L
+A B C G I L
+B C D E G H I J L
+A C G K
+D H
+A C D E F G H I J L
+A C E I K L
+B D I J K L
+C F H
+D F G H I K
+A C E F G I K L
+A B C D E G I J
+C F G H I K L
+A C G J K
+D F G J L
+I
+A D E G L
+B D F H I
+D E H J
+A C D E F H I
+B H J L
+D H J K L
+E F G H K L
+B C E G H L
+C F G I K
+A B C G H I L
+A B H J L
+B F H
+A B C E J K L
+A F I J K
+A C D E G J K
+A B D I K L
+B C G I
+A B I J L
+C F H I K
+A B C D E H K
+D E F I J K L
+A B E F G J
+A F G H I K L
+A B C E F K L
+C F G I J K L
+A B C E G H K
+A B C E G H J L
+A C G H I K L
+B E F I J K L
+B D E F G H I J L
+C E I J K
+A C D I J L
+A C D F H K
+B C E H J
+C E H I J K
+B C D E G H J L
+D G H I L
+B D H J K
+A E F H J K
+A C D I K
+A B H I
+A B C D H K L
+C D G H J
+A B C E F H I K
+C E G H J
+E G I J K
+A B D E G H L
+B C D E G H J
+C D E F G I J K L
+A C E F H K
+D E G H J
+A B E H I J K
+A B C G H I J K L
+A D K
+A B C D F G J K L
+D G H J K L
+A B C D E H I K
+C D E I
+B C D E F H L
+B C D H L
+D E F H I J K L
+C D I K L
+A F G I J L
+B C D E F H I K L
+A B C D E F I J L
+A B E G H I J L
+D F G I L
+A B C E F G I J K L
+A E H J K L
+D G I L
+A D H J L
+C D E G J K L
+A B D E I K L
+A F H I J K L
+A B C F G H I J K L
+A H L
+A C D E F L
+E F G H I K L
+A B E F H I J
+A D E F G H I J K L
+A C E F G J K
+E G H K L
+B E H K
+A G H
+A C E F H I J L
+A C H I
+A C E G H J L
+A B C F H J K
+A C E H J L
+D E G H K L
+A B C F J K L
+A C I J K L
+B D G H I K
+A D F G K
+B C E F G I L
+A B D E F K
+C E F J K
+A E G H J L
+A F I
+A C D G H L
+A E G H I J K L
+C D E F G L
+A B C I J L
+A B C E I L
+A F H L
+B G L
+C D E F H
+D E F I L
+F I
+C D F G H I J
+E G H J K L
+B C F H I J K
+A B E F H I K L
+B C E G I K
+C H J L
+A C G I J
+A B C D F G H I K L
+B C F G H I L
+A B C E G I J K
+A B D E F H I
+C D F H
+C F G K L
+B C E G I
+B C E
+A B C E J
+A B C I
+B C D F H
+A C D E F G J K L
+A B C D H K
+A E F K L
+A C D E F H I K L
+B C F G I
+G H I
+B C D F K
+A B C D F H I
+A E H I J K L
+A C E F G
+B D F K L
+A B E F G H I
+E F I
+A B C F
+A C H L
+A C E F H J K L
+B C D E F G I K
+A B E F I
+A C E G H I J L
+A C D F L
+B C D E F G L
+B F H I
+C D E F G I J K
+A D G K
+C F G I K L
+A B F G I J
+A D F G H J L
+A E H I J
+A D F G H I
+A D G H I J
+A B E F I J K
+B D E G I
+A B C E F
+D F
+C F G K
+D E H I
+A B D F G I
+E I
+A B D E G K L
+A B F L
+B C F H K
+B F H I J K
+A C F J
+A C D F G I J K L
+A B D H I J L
+A B C D G H I K L
+A B D J K
+A D E I
+A B C D F G I J
+A D E F H K
+A B D G H I J
+D F H I
+A D G I K L
+E F H K
+A C D H I J K
+B C D E F H J
+B C E G H I J K
+A C D F G H I J
+B D E G I K L
+C D E H I K L
+A C D F G K L
+A B C D F G J K
+D G J L
+B D E H I J K
+D E G H K
+A B C D E G H I
+B D E F G I L
+A C G H I J K
+B E G K
+A C G H J L
+B C E J K
+B H I J K
+B D L
+B F H I K L
+A B E G H I K
+C E F H J
+C E H J K L
+B E F G H I
+B C D F G H I J K
+A C D F K L
+B C F G I K L
+A D E G H J
+C D F H J K
+B C D G J L
+B C D E I J
+C D F H J
+C F G H I J K
+B D G K L
+B E I J L
+B D F I K
+A B E F H J L
+D H L
+B C E F H I J K
+D E F J
+B D F J K
+B E F G H I J K
+H I J L
+A D F G L
+A B C D E G I J K
+A B C D F G H L
+A B F H I J
+A B G J L
+B E F H I K L
+A D F G H I J
+A C F G I K L
+A D E G H I J
+B C D F I
+F H K L
+C D E F G H I
+A C F G H J L
+C E F G K L
+C D F J K
+A B E F G H K
+D E F H J
+D F K L
+A C D E F I J L
+A B C H I K L
+C D H I K L
+A F H I J K
+A C H I J L
+A D G H I L
+D F I J
+B F G I J K
+G H K
+A C D E G H
+A C J K
+D E F G I L
+A E F H J K L
+A C D F I J L
+E F G I K
+C E F G I J
+A B C D F G I K
+C D E J
+D E G H L
+A C D E H I J
+B C D H I
+A B D E F G H K
+C D E H I K
+C D F H J K L
+B C E G I J K L
+A C F I K L
+A B C E H J
+A D E F G H J L
+B D G I J K
+I J K L
+A D F G I J K L
+A C D E G I K
+B D J K
+B E F H I
+A D F I J
+B C E J L
+A B E I J K
+B G J K L
+B D E G I K
+A C D E H I J K
+B C E G H I K
+A B D E K
+A B F G H K L
+C D E H I J
+B E G H I K
+A B D E F H I K
+C D E G K
+A B C D F G H K L
+A C E F
+A C E H J K L
+E F H I
+A D F G H I J L
+A C F G J
+B C D G H I L
+D E F G H J
+B C D E G J K L
+A B D E F I K
+A H I J
+C D E J K L
+E F H I J
+A G H K
+B E G J L
+A C F G H K
+B C G L
+G I J K L
+A D E F G K L
+B C G J L
+A B C D E F G K
+A B C D H J
+A B C E F G I K
+B D G H I L
+D H I K
+A C D E G I J K L
+A C E F G I
+A D E F J
+B C E G I J K
+B C F I K
+D H I J K
+G H J K
+A B C E F G H I
+A E G I K
+B C D E H J
+A C D F G I K
+A B D F J
+C E F G H J K
+C H I J L
+C D E I L
+D E K
+A D E F G I K
+D G I K L
+B D E I J K
+F G J K
+A D G H K L
+A B C D F L
+G I J K
+A B G H J K
+A E F G J K L
+A B C D G H J K L
+A D E F G H I K L
+A D F I L
+B D E G H J
+A D E F G H I K
+A C E F G I L
+B D F J
+A B C D G H I L
+B E F G H I J
+A B C H J L
+C D F G H J K
+A D E G I K L
+A B C E F G I J
+A D F G H I K L
+B D E F J K L
+A C D F H L
+A C D G I L
+B C H J
+A C D G H I J K
+D F J L
+A B C E G H I K L
+A B C H I J
+A F G H J K
+A C F G K L
+A C D G H I K L
+A E G J K
+B C G H J
+A B C I L
+D
+F H I J
+B C D H J K
+A B C D F I J L
+B D H
+D E F K
+A D E F H I J
+A B C D E F J K
+C D G H I J
+A B D E F K L
+A B C G I K
+B D F I J
+A B D E G I
+C I J K
+B D H K
+B G I J
+A C D G I J K L
+A B E L
+B D F G H J K L
+A B C D E F J L
+B C E F I
+A B C D E J
+A C E F L
+C D K L
+F G H I
+B E F G I J
+D G K L
+B F G I K
+B D E F G I J L
+A B H J
+A B D F H I J K L
+A C E H J K
+C D H K L
+A D F H I K L
+A B C F H I
+B C D F G H J
+B D E H I J
+B D F I
+B C D F G I K
+A B F H I K L
+A B E F G I L
+A B C D F G L
+A B E F I J L
+B F G J L
+A B C F H I J K L
+A D J K
+C E F I L
+A D E I J L
+B C F H I K
+C G H I J K
+A D F I J K
+C I J K L
+C I K
+D I J K
+C D E H K
+B D F G I K L
+A C E F H I J
+B C G I J
+B D E F H
+B C E F H J L
+A B F H I J K
+C G J K
+C D E G I J
+F G H I K L
+A H I
+A B D E H I J
+A C F K L
+C E F K L
+I L
+A B D E F G I J K L
+B C E F L
+B E F J L
+A B C D G I
+B E F H I J K
+A L
+D F K
+B E G
+A C E H L
+A B E F H K L
+A E H I J K
+A B C E F H
+A E F G J L
+B F H I J L
+A B C D F G H K
+A B C D H J K L
+C D E F J K L
+A B C D E F J
+A C D F H I J L
+C D F I L
+A D F G H L
+C D F G K L
+A B D E H J
+A C D G I J K
+B C G H I
+A C D E H I J L
+C G I K
+A E F G H J L
+C H I J
+B D F G K L
+B C E F G J K L
+C F H K L
+A B D F K
+A B G H I J
+A C E F K
+B D E F H I K
+A C D E G L
+A B D E F H J L
+A B C F I
+A B C D J
+A B D F G H I L
+D E F G H I J
+B I K
+B I J L
+B C E F G H L
+A C D E I J L
+A C D E K L
+A B C E F G H I J
+A B E F I L
+A B C E F I J L
+B C E F G H K L
+A B C E H I L
+B D H I J K
+A B C D E F I J K
+A B E G H I
+A B E F G L
+A C D F H I J K L
+B C D E F G H K
+G I K L
+A B D E G J L
+B E F H J K
+B D E G L
+A D I J
+E F G I J K
+B C E F G H I
+A B C D G I K L
+B C D E J
+A B F G H K
+B D E F K
+B E H I J K
+C D E H K L
+D H I K L
+F J L
+A G H J K
+C D G H J L
+D E G I K L
+A B C D E F G H K L
+A C E I L
+A B E G J
+A C D E G H I K
+B D E F G H I J K
+A D E F I J K
+A C E F G H I K
+B D H I J L
+D F H
+D E I K L
+A B C E F K
+A D E F G I
+D E H L
+A B F G H L
+C D G H I J L
+B C D F G H I K L
+A D E F G H L
+A D E G H J L
+A B C D E I K L
+B C D E G I K
+B C E F H I J
+B C D E F J K
+B D F I J K
+B C E J K L
+A B D E F G
+E H I K
+A B H I J L
+B C D E
+A D E G I J
+C D E F G I
+A C F
+B D F J K L
+B E F H J
+C E G I J K L
+B C H K
+A E F G K
+F H I J K L
+A C E G K L
+A D E F G J L
+C D E F G J L
+B F G
+A B C D F G H I J K L
+A B D I J K
+A B C G H K L
+A B E F H I
+B C E F H I J L
+F G K
+A B C D H I J L
+A B C D E H J L
+C D H I J L
+B C D E G I J L
+A B E
+A B D E J L
+A C H J L
+C D E F G H I J K L
+D E F I J K
+A B D F G H J K L
+B C D E G J K
+C D E F L
+A D F G K L
+E I K
+B E J K L
+C E F G H J K L
+A B D E I J K L
+A C F G K
+B C D E H I J L
+A E F
+E J
+A B C G H J
+B C D H J
+B C F I L
+B C F G I J K
+C E G I
+B C H J L
+G J K
+A B C D F G H I J K
+C E I
+A C D E F G H J L
+A B C D E H J
+C D F G I
+A F G I J
+A D H K L
+A C E F J K
+A C H I K
+D F I J K
+A B C J K L
+C E F G H I J
+B D F G J K
+B C D E F G I L
+B C D E F H I J L
+D F G I J
+B D F G I J K L
+C D F H I J L
+A G H I J K L
+A B C E G H I J
+A B C D K L
+A B C D E G H L
+B C D F H L
+A B K
+C D G H J K
+C D E G H K
+A B C D E F
+B G I K
+B E F G I J L
+A C D E F H J L
+A B C D E F H K
+A B C D K
+B C D E F H I J
+A B D F H J
+B G I
+A B D E H I
+B C E F G L
+C F H J
+B C I J L
+B C E F G I J K
+B H K
+A B D K
+A I K L
+H K L
+C D E G I L
+A B C D E F G H I K
+A B C D F G I L
+B C E F H K
+A C D E F G I J K L
+A B C F H J
+B C D E G H J K L
+A B C H I J K
+C I
+E H I J K L
+C D F I K
+H I K
+A C D E G H J K
+A B E I K
+A C D G H
+A C D H J K L
+A B C D E H L
+A B D J
+F K L
+A E G
+A B C E F G H K
+A B F G H I K
+C D E F G J K
+B I
+A C D E H I L
+G H I J K
+A B C D E F G H I J K
+B E J K
+A C D I L
+F K
+A D E F G H I L
+B D E F
+A B C D G H J L
+A H J
+A B C E G I J L
+A B C D H J K
+E F G J
+A B C G J K
+B E G H J
+B C F G L
+B D F G L
+B C D E I J K
+B C G H I K
+A D G H I J K
+A C D E F I J
