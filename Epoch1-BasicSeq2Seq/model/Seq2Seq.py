@@ -7,6 +7,7 @@ from torch.autograd import Variable
 class Seq2Seq(nn.Module):
 
     def __init__(self, encoder, decoder, sos_index, use_cuda):
+        super(Seq2Seq, self).__init__()
         self.encoder = encoder
         self.decoder = decoder
         self.sos_index = sos_index
@@ -32,7 +33,7 @@ class Seq2Seq(nn.Module):
             max_target_length,
             batch_size,
             self.decoder.output_size
-        ))  # (time_steps, batch_size, output_dim)
+        ))  # (time_steps, batch_size, vocab_size)
 
         if self.use_cuda:
             decoder_input = decoder_input.cuda()
@@ -42,6 +43,17 @@ class Seq2Seq(nn.Module):
         for t in range(max_target_length):
             decoder_outputs_on_t, decoder_hidden = self.decoder(decoder_input, decoder_hidden)
             decoder_outputs[t] = decoder_outputs_on_t
-            decoder_input = decoder_outputs_on_t  # select the former output as input
+            decoder_input = self.decode(decoder_outputs_on_t)  # select the former output as input
 
         return decoder_outputs, decoder_hidden
+
+    def decode(self, decoder_output):
+        """
+        Decode the decoder output(logits) to the top1 index
+        :param decoder_output: S = T(1) x B
+        """
+        value, index = torch.topk(decoder_output, 1)
+        index = index.transpose(0, 1)  # T x B
+        if self.use_cuda:
+            index = index.cuda()
+        return index

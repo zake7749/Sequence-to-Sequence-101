@@ -77,6 +77,7 @@ class DataTransformer(object):
         self.vocab = Vocabulary()
         self.vocab.build_vocab(path)
         self.PAD_ID = self.vocab.char2idx["PAD"]
+        self.SOS_ID = self.vocab.char2idx["SOS"]
         self.vocab_size = self.vocab.num_chars
         self.max_length = self.vocab.max_length
 
