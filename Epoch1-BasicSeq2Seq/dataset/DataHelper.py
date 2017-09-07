@@ -101,16 +101,16 @@ class DataTransformer(object):
         ]
 
         for batch in mini_batches:
-            seq_pairs = sorted(batch, key=lambda seqs: len(seqs[0]), reverse=True) # sorted by input_lengths
+            seq_pairs = sorted(batch, key=lambda seqs: len(seqs[0]), reverse=True)  # sorted by input_lengths
             input_seqs = [pair[0] for pair in seq_pairs]
             target_seqs = [pair[1] for pair in seq_pairs]
 
             input_lengths = [len(s) for s in input_seqs]
-            in_max = max(input_lengths)
+            in_max = input_lengths[0]
             input_padded = [self.pad_sequence(s, in_max) for s in input_seqs]
 
             target_lengths = [len(s) for s in target_seqs]
-            out_max = max(target_lengths)
+            out_max = target_lengths[0]
             target_padded = [self.pad_sequence(s, out_max) for s in target_seqs]
 
             input_var = Variable(torch.LongTensor(input_padded)).transpose(0, 1)  # time * batch
@@ -128,6 +128,31 @@ class DataTransformer(object):
     def pad_sequence(self, sequence, max_length):
         sequence += [self.PAD_ID for i in range(max_length - len(sequence))]
         return sequence
+
+    def evaluation_batch(self, words):
+        """
+        Prepare a batch of var for evaluating
+        :param words: a list, store the testing data 
+        :return: evaluation_batch
+        """
+        evaluation_batch = []
+
+        for word in words:
+            indices_seq = self.vocab.sequence_to_indices(word, add_eos=True)
+            evaluation_batch.append([indices_seq])
+
+        seq_pairs = sorted(evaluation_batch, key=lambda seqs: len(seqs[0]), reverse=True)
+        input_seqs = [pair[0] for pair in seq_pairs]
+        input_lengths = [len(s) for s in input_seqs]
+        in_max = input_lengths[0]
+        input_padded = [self.pad_sequence(s, in_max) for s in input_seqs]
+
+        input_var = Variable(torch.LongTensor(input_padded)).transpose(0, 1)  # time * batch
+
+        if self.use_cuda:
+            input_var = input_var.cuda()
+
+        return input_var, input_lengths
 
 if __name__ == '__main__':
     vocab = Vocabulary()
