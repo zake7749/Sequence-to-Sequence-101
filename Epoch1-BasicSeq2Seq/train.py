@@ -1,66 +1,79 @@
 import torch
-from torch.autograd import Variable
 
 from model.Encoder import VanillaEncoder
 from model.Decoder import VanillaDecoder
 from model.Seq2Seq import Seq2Seq
 from dataset.DataHelper import DataTransformer
-
-# define hyper parameter
-use_cuda = True if torch.cuda.is_available() else False
-
-# for training
-epochs = 50
-batch_size = 128
-learning_rate = 1e-3
-
-# model
-encoder_embedding_size = 128
-encoder_output_size = 256
-decoder_hidden_size = encoder_output_size
+from config import config
 
 
-def train(model, data_transformer, criterion):
+class Trainer(object):
 
-    loss = 0
-    optimizer = torch.optim.Adagrad(model.parameters(), lr=0.001)
+    def __init__(self, model, data_transformer, learning_rate):
 
-    for epoch in range(0, epochs):
-        input_batches, target_batches = data_transformer.mini_batches(batch_size=batch_size)
-        for input_batch, target_batch in zip(input_batches, target_batches):
-            decoder_outputs, decoder_hidden = model(input_batch, target_batch)
-            loss += calculate_loss(criterion, decoder_outputs, target_batch[0])
+        self.model = model
 
+        # record some information about dataset
+        self.data_transformer = data_transformer
+        self.vocab_size = self.data_transformer.vocab_size
+        self.PAD_ID = self.data_transformer.PAD_ID
 
-def calculate_loss(criterion, decoder_outputs, targets):
-    #To_Fix
-    batch_size = decoder_outputs.size(1)
-    time_steps = decoder_outputs.size(0)
-    targets = targets.transpose(0, 1) # S = B * T
-    decoder_outputs = decoder_outputs.view(batch_size * time_steps, -1)  # S = (B*T) x V
-    loss = 0
-    loss += criterion(decoder_outputs, targets)
+        # optimizer setting
+        self.learning_rate = learning_rate
+        self.optimizer= torch.optim.Adam(self.model.parameters(), lr=learning_rate)
+
+    def train(self, num_epochs, batch_size):
+        for epoch in range(0, num_epochs):
+
+            input_batches, target_batches = self.data_transformer.mini_batches(batch_size=batch_size)
+            
+            for input_batch, target_batch in zip(input_batches, target_batches):
+                self.optimizer.zero_grad()
+                decoder_outputs, decoder_hidden = self.model(input_batch, target_batch)
+                cur_loss = self.masked_nllloss(decoder_outputs, target_batch[0])
+                cur_loss.backward()
+                self.optimizer.step()
+                print(cur_loss.data[0])
+
+    def masked_nllloss(self, decoder_outputs, targets):
+        b = decoder_outputs.size(1)
+        t = decoder_outputs.size(0)
+        targets = targets.contiguous().view(-1)  # S = (B*T)
+        decoder_outputs = decoder_outputs.view(b * t, -1)  # S = (B*T) x V
+
+        # define the masked NLLoss
+        weight = torch.ones(self.vocab_size)
+        weight[self.PAD_ID] = 0
+        criterion = torch.nn.NLLLoss(weight=weight)(decoder_outputs, targets)
+
+        return criterion
+
+    def save_model(self):
+        pass
+
+    def load_model(self):
+        pass
+
+    def tensorboard_log(self):
+        pass
+
 
 def main():
-    data_transformer = DataTransformer('dataset/Google-10000-English.txt', use_cuda=False)
+    data_transformer = DataTransformer(config.dataset_path, use_cuda=False)
 
     # define our models
     vanilla_encoder = VanillaEncoder(vocab_size=data_transformer.vocab_size,
-                                     embedding_size=encoder_embedding_size,
-                                     output_size=encoder_output_size)
-    vanilla_decoder = VanillaDecoder(hidden_size=decoder_hidden_size,
+                                     embedding_size=config.encoder_embedding_size,
+                                     output_size=config.encoder_output_size)
+    vanilla_decoder = VanillaDecoder(hidden_size=config.decoder_hidden_size,
                                      output_size=data_transformer.vocab_size)
     seq2seq = Seq2Seq(encoder=vanilla_encoder,
-                      decoder=vanilla_decoder,
-                      sos_index=data_transformer.SOS_ID,
-                      use_cuda=use_cuda)
+                           decoder=vanilla_decoder,
+                           sos_index=data_transformer.SOS_ID,
+                           use_cuda=config.use_cuda)
 
-    # define the masked NLLoss
-    weight = torch.ones(data_transformer.vocab_size)
-    weight[data_transformer.PAD_ID] = 0
-    criterion = torch.nn.NLLLoss(weight=weight)
-
-    train(seq2seq, data_transformer, criterion)
+    trainer = Trainer(seq2seq, data_transformer, config.learning_rate)
+    trainer.train(num_epochs=config.num_epochs, batch_size=config.batch_size)
 
 if __name__ == "__main__":
     main()
