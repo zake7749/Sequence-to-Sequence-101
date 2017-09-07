@@ -9,7 +9,7 @@ from config import config
 
 class Trainer(object):
 
-    def __init__(self, model, data_transformer, learning_rate):
+    def __init__(self, model, data_transformer, learning_rate, use_cuda):
 
         self.model = model
 
@@ -17,6 +17,7 @@ class Trainer(object):
         self.data_transformer = data_transformer
         self.vocab_size = self.data_transformer.vocab_size
         self.PAD_ID = self.data_transformer.PAD_ID
+        self.use_cuda = use_cuda
 
         # optimizer setting
         self.learning_rate = learning_rate
@@ -30,8 +31,12 @@ class Trainer(object):
             for input_batch, target_batch in zip(input_batches, target_batches):
                 self.optimizer.zero_grad()
                 decoder_outputs, decoder_hidden = self.model(input_batch, target_batch)
+
+                # calculate the loss and back prop.
                 cur_loss = self.masked_nllloss(decoder_outputs, target_batch[0])
                 cur_loss.backward()
+
+                # optimize
                 self.optimizer.step()
                 print(cur_loss.data[0])
 
@@ -44,8 +49,10 @@ class Trainer(object):
         # define the masked NLLoss
         weight = torch.ones(self.vocab_size)
         weight[self.PAD_ID] = 0
-        criterion = torch.nn.NLLLoss(weight=weight)(decoder_outputs, targets)
+        if self.use_cuda:
+            weight = weight.cuda()
 
+        criterion = torch.nn.NLLLoss(weight=weight)(decoder_outputs, targets)
         return criterion
 
     def save_model(self):
@@ -59,7 +66,7 @@ class Trainer(object):
 
 
 def main():
-    data_transformer = DataTransformer(config.dataset_path, use_cuda=False)
+    data_transformer = DataTransformer(config.dataset_path, use_cuda=config.use_cuda)
 
     # define our models
     vanilla_encoder = VanillaEncoder(vocab_size=data_transformer.vocab_size,
@@ -67,13 +74,19 @@ def main():
                                      output_size=config.encoder_output_size)
     vanilla_decoder = VanillaDecoder(hidden_size=config.decoder_hidden_size,
                                      output_size=data_transformer.vocab_size)
+
+    if config.use_cuda:
+        vanilla_encoder = vanilla_encoder.cuda()
+        vanilla_decoder = vanilla_decoder.cuda()
+
     seq2seq = Seq2Seq(encoder=vanilla_encoder,
                            decoder=vanilla_decoder,
                            sos_index=data_transformer.SOS_ID,
                            use_cuda=config.use_cuda)
 
-    trainer = Trainer(seq2seq, data_transformer, config.learning_rate)
+    trainer = Trainer(seq2seq, data_transformer, config.learning_rate, config.use_cuda)
     trainer.train(num_epochs=config.num_epochs, batch_size=config.batch_size)
+
 
 if __name__ == "__main__":
     main()
