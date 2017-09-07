@@ -43,13 +43,13 @@ class Seq2Seq(nn.Module):
         for t in range(max_target_length):
             decoder_outputs_on_t, decoder_hidden = self.decoder(decoder_input, decoder_hidden)
             decoder_outputs[t] = decoder_outputs_on_t
-            decoder_input = self.decode(decoder_outputs_on_t)  # select the former output as input
+            decoder_input = self.eval_on_char(decoder_outputs_on_t)  # select the former output as input
 
         return decoder_outputs, decoder_hidden
 
-    def decode(self, decoder_output):
+    def eval_on_char(self, decoder_output):
         """
-        Decode the decoder output(logits) to the top1 index
+        evaluate on the decoder output(logits), find the top 1 index
         :param decoder_output: S = T(1) x B
         """
         value, index = torch.topk(decoder_output, 1)
@@ -57,3 +57,11 @@ class Seq2Seq(nn.Module):
         if self.use_cuda:
             index = index.cuda()
         return index
+
+    def eval_on_sequence(self, decoder_outputs):
+        """evaluate on the decoder output(logits), find the top 1 index
+        :param decoder_outputs: the output sequence from decoder, shape = T x B x V
+        :return: 
+        """
+        pass
+
