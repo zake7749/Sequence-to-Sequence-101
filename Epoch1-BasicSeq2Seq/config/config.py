@@ -6,7 +6,7 @@ use_cuda = True if torch.cuda.is_available() else False
 dataset_path = 'dataset/Google-10000-English.txt'
 
 # for training
-num_epochs = 50
+num_epochs = 100
 batch_size = 128
 learning_rate = 1e-3
 
@@ -14,3 +14,6 @@ learning_rate = 1e-3
 encoder_embedding_size = 128
 encoder_output_size = 256
 decoder_hidden_size = encoder_output_size
+
+# for logging
+checkpoint_name = 'auto_encoder.pt'
