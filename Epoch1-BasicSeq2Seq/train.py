@@ -44,7 +44,7 @@ class Trainer(object):
 
                 # optimize
                 self.optimizer.step()
-                print(cur_loss.data[0])
+                print("loss", cur_loss.data[0])
 
         self.save_model()
 
@@ -64,15 +64,27 @@ class Trainer(object):
         return criterion
 
     def save_model(self):
-        self.model.save_state_dict(self.checkpoint_name)
+        torch.save(self.model.state_dict(), self.checkpoint_name)
         print("Model has saved as %s.\n" % self.checkpoint_name)
 
     def load_model(self):
-        self.model.load_state_dict(self.checkpoint_name)
+        self.model.load_state_dict(torch.load(self.checkpoint_name))
         print("Pretrained model has been loaded.\n")
 
     def tensorboard_log(self):
         pass
+
+    def evaluate(self, words):
+
+        # make sure that words is list
+        if type(words) is not list:
+            words = [words]
+
+        # transform word to index-sequence
+        eval_var = self.data_transformer.evaluation_batch(words=words)
+        decoded_indices = self.model.evaluation(eval_var)
+        for index in decoded_indices:
+            print(self.data_transformer.vocab.indices_to_sequence(index))
 
 
 def main():
@@ -95,8 +107,7 @@ def main():
                            use_cuda=config.use_cuda)
 
     trainer = Trainer(seq2seq, data_transformer, config.learning_rate, config.use_cuda)
-    trainer.train(num_epochs=config.num_epochs, batch_size=config.batch_size)
-
+    trainer.train(num_epochs=config.num_epochs, batch_size=config.batch_size, pretrained=False)
 
 if __name__ == "__main__":
     main()
