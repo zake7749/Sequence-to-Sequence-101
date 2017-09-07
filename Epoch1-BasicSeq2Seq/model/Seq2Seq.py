@@ -49,19 +49,30 @@ class Seq2Seq(nn.Module):
 
     def eval_on_char(self, decoder_output):
         """
-        evaluate on the decoder output(logits), find the top 1 index
-        :param decoder_output: S = T(1) x B
+        evaluate on the decoder output(logits), get the index of top1
+        :param decoder_output: S = B x V or T x V
         """
         value, index = torch.topk(decoder_output, 1)
-        index = index.transpose(0, 1)  # T x B
+        index = index.transpose(0, 1)  # S = 1 x B, 1 is the index of top1
         if self.use_cuda:
             index = index.cuda()
         return index
 
     def eval_on_sequence(self, decoder_outputs):
-        """evaluate on the decoder output(logits), find the top 1 index
-        :param decoder_outputs: the output sequence from decoder, shape = T x B x V
-        :return: 
         """
-        pass
+        Evaluate on the decoder output(logits), find the top 1 index.
+        Please make sure that the seq2seq model is in evaluation mode when testing
+        :param decoder_outputs: the output sequence from decoder, shape = T x B x V 
+        """
+        decoded_indices = []
+
+        max_length = decoder_outputs.size(0)
+        batch_size = decoder_outputs.size(1)
+
+        decoder_outputs = decoder_outputs.transpose(0, 1) # S = B x T x V
+
+        for b in range(batch_size):
+            top_ids = self.eval_on_char(decoder_outputs[b])
+            decoded_indices.append(top_ids.data[0])
+        return decoded_indices
 

@@ -9,7 +9,7 @@ from config import config
 
 class Trainer(object):
 
-    def __init__(self, model, data_transformer, learning_rate, use_cuda):
+    def __init__(self, model, data_transformer, learning_rate, use_cuda, checkpoint_name=config.checkpoint_name):
 
         self.model = model
 
@@ -23,7 +23,13 @@ class Trainer(object):
         self.learning_rate = learning_rate
         self.optimizer= torch.optim.Adam(self.model.parameters(), lr=learning_rate)
 
-    def train(self, num_epochs, batch_size):
+        self.checkpoint_name = checkpoint_name
+
+    def train(self, num_epochs, batch_size, pretrained=False):
+
+        if pretrained:
+            self.load_model()
+
         for epoch in range(0, num_epochs):
 
             input_batches, target_batches = self.data_transformer.mini_batches(batch_size=batch_size)
@@ -39,6 +45,8 @@ class Trainer(object):
                 # optimize
                 self.optimizer.step()
                 print(cur_loss.data[0])
+
+        self.save_model()
 
     def masked_nllloss(self, decoder_outputs, targets):
         b = decoder_outputs.size(1)
@@ -56,10 +64,12 @@ class Trainer(object):
         return criterion
 
     def save_model(self):
-        pass
+        self.model.save_state_dict(self.checkpoint_name)
+        print("Model has saved as %s.\n" % self.checkpoint_name)
 
     def load_model(self):
-        pass
+        self.model.load_state_dict(self.checkpoint_name)
+        print("Pretrained model has been loaded.\n")
 
     def tensorboard_log(self):
         pass
