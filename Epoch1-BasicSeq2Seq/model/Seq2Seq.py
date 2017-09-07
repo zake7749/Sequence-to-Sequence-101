@@ -47,6 +47,38 @@ class Seq2Seq(nn.Module):
 
         return decoder_outputs, decoder_hidden
 
+    def evaluation(self, inputs):
+        input_vars, input_lengths = inputs
+        time_steps = input_vars.size(0)
+        batch_size = input_vars.size(1)
+        max_target_length = 2 * time_steps
+
+        encoder_outputs, encoder_hidden = self.encoder(input_vars, input_lengths)
+
+        # Prepare variable for decoder on time_step_0
+        decoder_input = Variable(torch.LongTensor([[self.sos_index] * batch_size]))
+
+        # Pass the context vector
+        decoder_hidden = encoder_hidden
+
+        decoder_outputs = Variable(torch.zeros(
+            max_target_length,
+            batch_size,
+            self.decoder.output_size
+        ))  # (time_steps, batch_size, vocab_size)
+
+        if self.use_cuda:
+            decoder_input = decoder_input.cuda()
+            decoder_outputs = decoder_outputs.cuda()
+
+        # Unfold the decoder RNN on the time dimension
+        for t in range(max_target_length):
+            decoder_outputs_on_t, decoder_hidden = self.decoder(decoder_input, decoder_hidden)
+            decoder_outputs[t] = decoder_outputs_on_t
+            decoder_input = self.eval_on_char(decoder_outputs_on_t)  # select the former output as input
+
+        return self.eval_on_sequence(decoder_outputs)
+
     def eval_on_char(self, decoder_output):
         """
         evaluate on the decoder output(logits), get the index of top1
@@ -61,7 +93,7 @@ class Seq2Seq(nn.Module):
     def eval_on_sequence(self, decoder_outputs):
         """
         Evaluate on the decoder output(logits), find the top 1 index.
-        Please make sure that the seq2seq model is in evaluation mode when testing
+        Please confirm that the seq2seq model is on evaluation mode in testing phase 
         :param decoder_outputs: the output sequence from decoder, shape = T x B x V 
         """
         decoded_indices = []
@@ -69,7 +101,7 @@ class Seq2Seq(nn.Module):
         max_length = decoder_outputs.size(0)
         batch_size = decoder_outputs.size(1)
 
-        decoder_outputs = decoder_outputs.transpose(0, 1) # S = B x T x V
+        decoder_outputs = decoder_outputs.transpose(0, 1)  # S = B x T x V
 
         for b in range(batch_size):
             top_ids = self.eval_on_char(decoder_outputs[b])
