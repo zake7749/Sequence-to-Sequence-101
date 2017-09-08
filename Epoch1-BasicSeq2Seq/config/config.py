@@ -6,8 +6,8 @@ use_cuda = True if torch.cuda.is_available() else False
 dataset_path = 'dataset/Google-10000-English.txt'
 
 # for training
-num_epochs = 100
-batch_size = 128
+num_epochs = 5
+batch_size = 1000
 learning_rate = 1e-3
 
 # for model
