@@ -37,10 +37,16 @@ class Vocabulary(object):
             :param add_sos: if true, add the <SOS> tag at the beginning of given sentence
         """
         index_sequence = [self.char2idx['SOS']] if add_sos else []
+
         for char in self.split_sequence(sequence):
-            index_sequence.append(self.char2idx[char])
+            if char not in self.char2idx:
+                index_sequence.append((self.char2idx['UNK']))
+            else:
+                index_sequence.append(self.char2idx[char])
+
         if add_eos:
             index_sequence.append(self.char2idx['EOS'])
+
         return index_sequence
 
     def indices_to_sequence(self, indices):
@@ -48,15 +54,19 @@ class Vocabulary(object):
             :param indices: a list
         """
         sequence = ""
-        for id in indices:
-            sequence += self.idx2char[id]
+        for idx in indices:
+            char = self.idx2char[idx]
+            if char == "EOS":
+                break
+            else:
+                sequence += char
         return sequence
 
     def split_sequence(self, sequence):
         """Vary from languages and tasks. In our task, we simply return chars in given sentence
         For example:
             Input : alphabet
-            Return: [a, l, p, h, b, e, t]
+            Return: [a, l, p, h, a, b, e, t]
         """
         return [char for char in sequence]
 
@@ -120,10 +130,7 @@ class DataTransformer(object):
                 input_var = input_var.cuda()
                 target_var = target_var.cuda()
 
-            input_batches.append((input_var, input_lengths))
-            target_batches.append((target_var, target_lengths))
-
-        return input_batches, target_batches
+            yield (input_var, input_lengths), (target_var, target_lengths)
 
     def pad_sequence(self, sequence, max_length):
         sequence += [self.PAD_ID for i in range(max_length - len(sequence))]

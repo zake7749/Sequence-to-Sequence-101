@@ -31,10 +31,8 @@ class Trainer(object):
             self.load_model()
 
         for epoch in range(0, num_epochs):
-
-            input_batches, target_batches = self.data_transformer.mini_batches(batch_size=batch_size)
-            
-            for input_batch, target_batch in zip(input_batches, target_batches):
+            mini_batches = self.data_transformer.mini_batches(batch_size=batch_size)
+            for input_batch, target_batch in mini_batches:
                 self.optimizer.zero_grad()
                 decoder_outputs, decoder_hidden = self.model(input_batch, target_batch)
 
@@ -107,7 +105,7 @@ def main():
                            use_cuda=config.use_cuda)
 
     trainer = Trainer(seq2seq, data_transformer, config.learning_rate, config.use_cuda)
-    trainer.train(num_epochs=config.num_epochs, batch_size=config.batch_size, pretrained=False)
+    trainer.train(num_epochs=config.num_epochs, batch_size=config.batch_size, pretrained=True)
 
 if __name__ == "__main__":
     main()
