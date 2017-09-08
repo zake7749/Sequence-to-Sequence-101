@@ -22,6 +22,7 @@ class Trainer(object):
         # optimizer setting
         self.learning_rate = learning_rate
         self.optimizer= torch.optim.Adam(self.model.parameters(), lr=learning_rate)
+        self.criterion = self.masked_nllloss()
 
         self.checkpoint_name = checkpoint_name
 
@@ -37,7 +38,7 @@ class Trainer(object):
                 decoder_outputs, decoder_hidden = self.model(input_batch, target_batch)
 
                 # calculate the loss and back prop.
-                cur_loss = self.masked_nllloss(decoder_outputs, target_batch[0])
+                cur_loss = self.get_loss(decoder_outputs, target_batch[0])
                 cur_loss.backward()
 
                 # optimize
@@ -46,20 +47,20 @@ class Trainer(object):
 
         self.save_model()
 
-    def masked_nllloss(self, decoder_outputs, targets):
-        b = decoder_outputs.size(1)
-        t = decoder_outputs.size(0)
-        targets = targets.contiguous().view(-1)  # S = (B*T)
-        decoder_outputs = decoder_outputs.view(b * t, -1)  # S = (B*T) x V
-
+    def masked_nllloss(self):
         # define the masked NLLoss
         weight = torch.ones(self.vocab_size)
         weight[self.PAD_ID] = 0
         if self.use_cuda:
             weight = weight.cuda()
+        return torch.nn.NLLLoss(weight=weight)
 
-        criterion = torch.nn.NLLLoss(weight=weight)(decoder_outputs, targets)
-        return criterion
+    def get_loss(self, decoder_outputs, targets):
+        b = decoder_outputs.size(1)
+        t = decoder_outputs.size(0)
+        targets = targets.contiguous().view(-1)  # S = (B*T)
+        decoder_outputs = decoder_outputs.view(b * t, -1)  # S = (B*T) x V
+        return self.criterion(decoder_outputs, targets)
 
     def save_model(self):
         torch.save(self.model.state_dict(), self.checkpoint_name)
@@ -105,7 +106,7 @@ def main():
                            use_cuda=config.use_cuda)
 
     trainer = Trainer(seq2seq, data_transformer, config.learning_rate, config.use_cuda)
-    trainer.train(num_epochs=config.num_epochs, batch_size=config.batch_size, pretrained=True)
+    trainer.train(num_epochs=config.num_epochs, batch_size=config.batch_size, pretrained=False)
 
 if __name__ == "__main__":
     main()
