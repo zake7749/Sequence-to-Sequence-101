@@ -49,7 +49,10 @@ class Vocabulary(object):
         """
         sequence = ""
         for id in indices:
+            if id ==1 :
+                break
             sequence += self.idx2char[id]
+            
         return sequence
 
     def split_sequence(self, sequence):
