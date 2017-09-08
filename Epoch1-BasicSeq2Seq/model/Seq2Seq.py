@@ -43,8 +43,7 @@ class Seq2Seq(nn.Module):
         for t in range(max_target_length):
             decoder_outputs_on_t, decoder_hidden = self.decoder(decoder_input, decoder_hidden)
             decoder_outputs[t] = decoder_outputs_on_t
-            decoder_input = self._eval_on_char(decoder_outputs_on_t)  # select the former output as input
-
+            decoder_input = target_vars[t].unsqueeze(0)
         return decoder_outputs, decoder_hidden
 
     def evaluation(self, inputs):

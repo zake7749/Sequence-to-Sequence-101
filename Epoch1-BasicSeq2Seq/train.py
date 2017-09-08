@@ -31,6 +31,8 @@ class Trainer(object):
         if pretrained:
             self.load_model()
 
+        step = 0
+
         for epoch in range(0, num_epochs):
             mini_batches = self.data_transformer.mini_batches(batch_size=batch_size)
             for input_batch, target_batch in mini_batches:
@@ -39,11 +41,15 @@ class Trainer(object):
 
                 # calculate the loss and back prop.
                 cur_loss = self.get_loss(decoder_outputs, target_batch[0])
+                # logging
+                step += 1
+                if step % 50 == 0:
+                    print("Step", step, cur_loss.data[0] / decoder_outputs.size(1))
+                    self.save_model()
                 cur_loss.backward()
 
                 # optimize
                 self.optimizer.step()
-                print("loss", cur_loss.data[0])
 
         self.save_model()
 
@@ -53,7 +59,7 @@ class Trainer(object):
         weight[self.PAD_ID] = 0
         if self.use_cuda:
             weight = weight.cuda()
-        return torch.nn.NLLLoss(weight=weight)
+        return torch.nn.NLLLoss(weight=weight).cuda()
 
     def get_loss(self, decoder_outputs, targets):
         b = decoder_outputs.size(1)
