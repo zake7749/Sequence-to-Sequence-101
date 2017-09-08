@@ -74,7 +74,6 @@ class Trainer(object):
         pass
 
     def evaluate(self, words):
-
         # make sure that words is list
         if type(words) is not list:
             words = [words]
@@ -82,8 +81,10 @@ class Trainer(object):
         # transform word to index-sequence
         eval_var = self.data_transformer.evaluation_batch(words=words)
         decoded_indices = self.model.evaluation(eval_var)
-        for index in decoded_indices:
-            print(self.data_transformer.vocab.indices_to_sequence(index))
+        results = []
+        for indices in decoded_indices:
+            results.append(self.data_transformer.vocab.indices_to_sequence(indices))
+        return results
 
 
 def main():
@@ -101,9 +102,9 @@ def main():
         vanilla_decoder = vanilla_decoder.cuda()
 
     seq2seq = Seq2Seq(encoder=vanilla_encoder,
-                           decoder=vanilla_decoder,
-                           sos_index=data_transformer.SOS_ID,
-                           use_cuda=config.use_cuda)
+                      decoder=vanilla_decoder,
+                      sos_index=data_transformer.SOS_ID,
+                      use_cuda=config.use_cuda)
 
     trainer = Trainer(seq2seq, data_transformer, config.learning_rate, config.use_cuda)
     trainer.train(num_epochs=config.num_epochs, batch_size=config.batch_size, pretrained=False)
