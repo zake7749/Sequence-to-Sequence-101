@@ -76,10 +76,10 @@ class trainer_class():
 
 def main():
 	data_transformer = DataTransformer('../dataset/Google-10000-English.txt', use_cuda=False)
-	seq2seq_model = Model(  encoder_embedding_size = encoder_embedding_size, 
-							encoder_output_size = encoder_output_size,
-							batch_size = batch_size,
-							vocab_size= data_transformer.vocab_size)
+	seq2seq_model = Model(encoder_embedding_size = encoder_embedding_size, 
+					      encoder_output_size = encoder_output_size,
+					      batch_size = batch_size,
+					      vocab_size= data_transformer.vocab_size)
 	trainer = trainer_class()
 	trainer.train(seq2seq_model, data_transformer)
 
