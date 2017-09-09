@@ -11,8 +11,9 @@ print("Make sure your tf version is the latest 1.3.0 , Your tf version: ",tf.__v
 
 class Model():
 	def __init__(self, encoder_embedding_size, encoder_output_size, batch_size, vocab_size, forward_only= None):
-		#define the model hyperarameters here
+		# Define the model hyperarameters here
 		"""
+			max_time means the input  length of this batch
 			encoder_inputs int32 tensor is shaped [encoder_max_time, batch_size]
 			decoder_targets int32 tensor is shaped [decoder_max_time, batch_size]
 			decoder_inputs int32 tensor is shaped [decoder_max_time, batch_size]
@@ -22,20 +23,22 @@ class Model():
 		self.decoder_targets = tf.placeholder(shape=(None, self.batch_size), dtype=tf.int32, name='decoder_targets')
 		self.decoder_inputs = tf.placeholder(shape=(None, self.batch_size), dtype=tf.int32, name='decoder_inputs')
 
-		self.encoder_inputs_inf = tf.placeholder(shape=(None, 1), dtype=tf.int32, name='encoder_inputs_inf')
-		self.input_sequence_length_inf =tf.placeholder(shape=([1]), dtype=tf.int32, name='input_length_inf')
-		self.decoder_inputs_inf = tf.placeholder(shape=(None, 1), dtype=tf.int32, name='decoder_inputs')
-
 		self.input_sequence_length = tf.placeholder(shape=([self.batch_size]), dtype=tf.int32, name='input_length')
 		self.decoder_sequence_length = tf.placeholder(shape=([self.batch_size]), dtype=tf.int32, name='decoder_inputs_length')
 		self.target_sequence_length = tf.placeholder(shape=([self.batch_size]), dtype=tf.float32, name='target_sequence_length')
 
-		self.forward_only = forward_only
 		self.encoder_hidden_size = encoder_embedding_size
 		self.decoder_hidden_size = encoder_output_size 
+		
+		"""Inference placeholder(Not yet finished the custom test part )"""
+		# self.encoder_inputs_inf = tf.placeholder(shape=(None, 1), dtype=tf.int32, name='encoder_inputs_inf')
+		# self.input_sequence_length_inf =tf.placeholder(shape=([1]), dtype=tf.int32, name='input_length_inf')
+		# self.decoder_inputs_inf = tf.placeholder(shape=(None, 1), dtype=tf.int32, name='decoder_inputs')
+		# self.forward_only = forward_only
+		
 
-		print("d hidden size",self.decoder_hidden_size)
-		#Embedding:
+		
+		# Embedding
 		"""	
 			We can use the one hot vector in the Datahelper to find the index of the vector in the emdbeddings
 		"""
@@ -43,11 +46,11 @@ class Model():
 		embeddings = tf.get_variable(name='embedding',
 			shape=[vocab_size, encoder_embedding_size],
 			initializer=initializer, dtype=tf.float32)
-
-		# embeddings = tf.get_variable(tf.random_uniform([vocab_size, encoder_embedding_size], -1.0, 1.0), dtype=tf.float32)
-		encoder_cell = GRUCell(self.encoder_hidden_size)
 		encoder_inputs_embedded = tf.nn.embedding_lookup(embeddings, self.encoder_inputs)
 		decoder_inputs_embedded = tf.nn.embedding_lookup(embeddings, self.decoder_inputs)
+
+		# Define the Cell used in the RNN. We use GRU in this model(Encoder & Decoder)
+		encoder_cell = GRUCell(self.encoder_hidden_size)
 		encoder_outputs, encoder_final_state = tf.nn.dynamic_rnn(
 											encoder_cell, 
 											encoder_inputs_embedded,
@@ -56,17 +59,17 @@ class Model():
 											time_major=True
 											)
 		
-		
-	
-		
-		#Decoder
+		# Decoder cell
 		decoder_cell = GRUCell(self.decoder_hidden_size)
-		#helper
+		
+		# Training Helper
 		helper = tf.contrib.seq2seq.TrainingHelper(
                 decoder_inputs_embedded, self.decoder_sequence_length, time_major=True)
-		#project layer
+		
+		# Project layer (Project the output to this layer(Softmax output). It's shape is [1*vocab_size].)
 		output_layer = layers_core.Dense(vocab_size , use_bias=False, name="output_projection")
 
+		# Define the decoder instance and feed it in to dynamic_decode function
 		decoder = tf.contrib.seq2seq.BasicDecoder(decoder_cell,
 												helper,
 												encoder_final_state,
