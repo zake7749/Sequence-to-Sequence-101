@@ -3,7 +3,7 @@ import tensorflow as tf
 from DataHelper import DataTransformer
 from tensorflow.contrib.rnn import GRUCell
 from tensorflow.python.layers import core as layers_core
-#
+
 tf.reset_default_graph()
 sess = tf.InteractiveSession()
 
@@ -52,11 +52,11 @@ class Model():
 		# Define the Cell used in the RNN. We use GRU in this model(Encoder & Decoder)
 		encoder_cell = GRUCell(self.encoder_hidden_size)
 		encoder_outputs, encoder_final_state = tf.nn.dynamic_rnn(
-											encoder_cell, 
-											encoder_inputs_embedded,
-											sequence_length = self.input_sequence_length,
-											dtype=tf.float32, 
-											time_major=True
+                                            encoder_cell, 
+                                            encoder_inputs_embedded,
+                                            sequence_length = self.input_sequence_length,
+                                            dtype=tf.float32, 
+                                            time_major=True
 											)
 		
 		# Decoder cell
@@ -72,8 +72,8 @@ class Model():
 		# Define the decoder instance and feed it in to dynamic_decode function
 		decoder = tf.contrib.seq2seq.BasicDecoder(decoder_cell,
 												helper,
-												encoder_final_state,
-												output_layer= output_layer
+                                                encoder_final_state,
+                                                output_layer= output_layer
 												)
 		final_outputs, final_context_state, _ = tf.contrib.seq2seq.dynamic_decode(decoder)
 		
