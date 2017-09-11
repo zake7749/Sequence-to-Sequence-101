@@ -1,4 +1,5 @@
 import torch
+import random
 
 from model.Encoder import VanillaEncoder
 from model.Decoder import VanillaDecoder
@@ -9,7 +10,9 @@ from config import config
 
 class Trainer(object):
 
-    def __init__(self, model, data_transformer, learning_rate, use_cuda, checkpoint_name=config.checkpoint_name):
+    def __init__(self, model, data_transformer, learning_rate, use_cuda,
+                 checkpoint_name=config.checkpoint_name,
+                 teacher_forcing_ratio=config.teacher_forcing_ratio):
 
         self.model = model
 
@@ -22,7 +25,7 @@ class Trainer(object):
         # optimizer setting
         self.learning_rate = learning_rate
         self.optimizer= torch.optim.Adam(self.model.parameters(), lr=learning_rate)
-        self.criterion = self.masked_nllloss()
+        self.criterion = torch.nn.NLLLoss(ignore_index=self.PAD_ID, size_average=True)
 
         self.checkpoint_name = checkpoint_name
 
@@ -41,10 +44,11 @@ class Trainer(object):
 
                 # calculate the loss and back prop.
                 cur_loss = self.get_loss(decoder_outputs, target_batch[0])
+
                 # logging
                 step += 1
                 if step % 50 == 0:
-                    print("Step", step, cur_loss.data[0] / decoder_outputs.size(1))
+                    print("Step:", step, "loss of char: ",cur_loss.data[0])
                     self.save_model()
                 cur_loss.backward()
 
@@ -54,6 +58,7 @@ class Trainer(object):
         self.save_model()
 
     def masked_nllloss(self):
+        # Deprecated in PyTorch 2.0, can be replaced by ignore_index
         # define the masked NLLoss
         weight = torch.ones(self.vocab_size)
         weight[self.PAD_ID] = 0
@@ -70,7 +75,7 @@ class Trainer(object):
 
     def save_model(self):
         torch.save(self.model.state_dict(), self.checkpoint_name)
-        print("Model has saved as %s.\n" % self.checkpoint_name)
+        print("Model has been saved as %s.\n" % self.checkpoint_name)
 
     def load_model(self):
         self.model.load_state_dict(torch.load(self.checkpoint_name))
@@ -110,7 +115,9 @@ def main():
     seq2seq = Seq2Seq(encoder=vanilla_encoder,
                       decoder=vanilla_decoder,
                       sos_index=data_transformer.SOS_ID,
-                      use_cuda=config.use_cuda)
+                      use_cuda=config.use_cuda,
+                      max_length=data_transformer.max_length,
+                      teacher_forcing_ratio=config.teacher_forcing_ratio)
 
     trainer = Trainer(seq2seq, data_transformer, config.learning_rate, config.use_cuda)
     trainer.train(num_epochs=config.num_epochs, batch_size=config.batch_size, pretrained=False)

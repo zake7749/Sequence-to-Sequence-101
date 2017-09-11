@@ -14,6 +14,8 @@ learning_rate = 1e-3
 encoder_embedding_size = 256
 encoder_output_size = 256
 decoder_hidden_size = encoder_output_size
+teacher_forcing_ratio = .5
+# max_length = 20
 
 # for logging
 checkpoint_name = 'auto_encoder.pt'

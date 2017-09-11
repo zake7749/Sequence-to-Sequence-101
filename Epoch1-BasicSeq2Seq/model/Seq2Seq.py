@@ -1,3 +1,4 @@
+import random
 import torch
 import torch.nn as nn
 
@@ -6,12 +7,14 @@ from torch.autograd import Variable
 
 class Seq2Seq(nn.Module):
 
-    def __init__(self, encoder, decoder, sos_index, use_cuda):
+    def __init__(self, encoder, decoder, sos_index, use_cuda, max_length, teacher_forcing_ratio):
         super(Seq2Seq, self).__init__()
         self.encoder = encoder
         self.decoder = decoder
         self.sos_index = sos_index
         self.use_cuda = use_cuda
+        self.max_length = max_length
+        self.teacher_forcing_ratio = teacher_forcing_ratio
 
     def forward(self, inputs, targets):
 
@@ -39,18 +42,22 @@ class Seq2Seq(nn.Module):
             decoder_input = decoder_input.cuda()
             decoder_outputs = decoder_outputs.cuda()
 
+        use_teacher_forcing = True if random.random() > self.teacher_forcing_ratio else False
+
         # Unfold the decoder RNN on the time dimension
         for t in range(max_target_length):
             decoder_outputs_on_t, decoder_hidden = self.decoder(decoder_input, decoder_hidden)
             decoder_outputs[t] = decoder_outputs_on_t
-            decoder_input = target_vars[t].unsqueeze(0)
+            if use_teacher_forcing:
+                decoder_input = target_vars[t].unsqueeze(0)
+            else:
+                decoder_input = self._decode_to_index(decoder_outputs_on_t)
+
         return decoder_outputs, decoder_hidden
 
     def evaluation(self, inputs):
         input_vars, input_lengths = inputs
-        time_steps = input_vars.size(0)
         batch_size = input_vars.size(1)
-        max_target_length = 2 * time_steps
 
         encoder_outputs, encoder_hidden = self.encoder(input_vars, input_lengths)
 
@@ -61,7 +68,7 @@ class Seq2Seq(nn.Module):
         decoder_hidden = encoder_hidden
 
         decoder_outputs = Variable(torch.zeros(
-            max_target_length,
+            self.max_length,
             batch_size,
             self.decoder.output_size
         ))  # (time_steps, batch_size, vocab_size)
@@ -71,14 +78,14 @@ class Seq2Seq(nn.Module):
             decoder_outputs = decoder_outputs.cuda()
 
         # Unfold the decoder RNN on the time dimension
-        for t in range(max_target_length):
+        for t in range(self.max_length):
             decoder_outputs_on_t, decoder_hidden = self.decoder(decoder_input, decoder_hidden)
             decoder_outputs[t] = decoder_outputs_on_t
-            decoder_input = self._eval_on_char(decoder_outputs_on_t)  # select the former output as input
+            decoder_input = self._decode_to_index(decoder_outputs_on_t)  # select the former output as input
 
-        return self._eval_on_sequence(decoder_outputs)
+        return self._decode_to_indices(decoder_outputs)
 
-    def _eval_on_char(self, decoder_output):
+    def _decode_to_index(self, decoder_output):
         """
         evaluate on the logits, get the index of top1
         :param decoder_output: S = B x V or T x V
@@ -89,7 +96,7 @@ class Seq2Seq(nn.Module):
             index = index.cuda()
         return index
 
-    def _eval_on_sequence(self, decoder_outputs):
+    def _decode_to_indices(self, decoder_outputs):
         """
         Evaluate on the decoder outputs(logits), find the top 1 indices.
         Please confirm that the model is on evaluation mode if dropout/batch_norm layers have been added
@@ -100,7 +107,7 @@ class Seq2Seq(nn.Module):
         decoder_outputs = decoder_outputs.transpose(0, 1)  # S = B x T x V
 
         for b in range(batch_size):
-            top_ids = self._eval_on_char(decoder_outputs[b])
+            top_ids = self._decode_to_index(decoder_outputs[b])
             decoded_indices.append(top_ids.data[0])
         return decoded_indices
 

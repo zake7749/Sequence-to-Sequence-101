@@ -23,7 +23,9 @@ def main():
     seq2seq = Seq2Seq(encoder=vanilla_encoder,
                       decoder=vanilla_decoder,
                       sos_index=data_transformer.SOS_ID,
-                      use_cuda=config.use_cuda)
+                      use_cuda=config.use_cuda,
+                      max_length=data_transformer.max_length,
+                      teacher_forcing_ratio=config.teacher_forcing_ratio)
 
     trainer = Trainer(seq2seq, data_transformer, config.learning_rate, config.use_cuda)
     trainer.load_model()
