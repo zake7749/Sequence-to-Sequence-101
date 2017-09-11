@@ -3,7 +3,7 @@ import tensorflow as tf
 from DataHelper import DataTransformer
 from tensorflow.contrib.rnn import GRUCell
 from tensorflow.python.layers import core as layers_core
-
+#
 tf.reset_default_graph()
 sess = tf.InteractiveSession()
 
