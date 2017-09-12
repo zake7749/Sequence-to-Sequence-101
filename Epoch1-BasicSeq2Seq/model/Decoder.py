@@ -21,5 +21,5 @@ class VanillaDecoder(nn.Module):
         embedded.view(1, batch_size, self.hidden_size)  # S = T(1) x B x N
         rnn_output, hidden = self.gru(embedded, hidden)  # S = T(1) x B x H
         rnn_output = rnn_output.squeeze(0)  # squeeze the time dimension
-        output = self.log_softmax(self.out(rnn_output))  # S = B x V
+        output = self.log_softmax(self.out(rnn_output))  # S = B x O
         return output, hidden
