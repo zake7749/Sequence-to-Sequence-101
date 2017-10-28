@@ -18,4 +18,4 @@ teacher_forcing_ratio = .5
 # max_length = 20
 
 # for logging
-checkpoint_name = 'pretrained.pt'
+checkpoint_name = 'auto_encoder.pt'
