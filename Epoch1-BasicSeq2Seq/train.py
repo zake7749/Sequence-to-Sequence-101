@@ -105,19 +105,20 @@ def main():
     vanilla_encoder = VanillaEncoder(vocab_size=data_transformer.vocab_size,
                                      embedding_size=config.encoder_embedding_size,
                                      output_size=config.encoder_output_size)
-    vanilla_decoder = VanillaDecoder(hidden_size=config.decoder_hidden_size,
-                                     output_size=data_transformer.vocab_size)
 
+    vanilla_decoder = VanillaDecoder(hidden_size=config.decoder_hidden_size,
+                                     output_size=data_transformer.vocab_size,
+                                     max_length=data_transformer.max_length,
+                                     teacher_forcing_ratio=config.teacher_forcing_ratio,
+                                     sos_id=data_transformer.SOS_ID,
+                                     use_cuda=config.use_cuda)
     if config.use_cuda:
         vanilla_encoder = vanilla_encoder.cuda()
         vanilla_decoder = vanilla_decoder.cuda()
 
+
     seq2seq = Seq2Seq(encoder=vanilla_encoder,
-                      decoder=vanilla_decoder,
-                      sos_index=data_transformer.SOS_ID,
-                      use_cuda=config.use_cuda,
-                      max_length=data_transformer.max_length,
-                      teacher_forcing_ratio=config.teacher_forcing_ratio)
+                      decoder=vanilla_decoder)
 
     trainer = Trainer(seq2seq, data_transformer, config.learning_rate, config.use_cuda)
     trainer.train(num_epochs=config.num_epochs, batch_size=config.batch_size, pretrained=False)
