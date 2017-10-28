@@ -174,9 +174,8 @@ if __name__ == '__main__':
     print("Sequence after transformed:",sent)
 
     data_transformer = DataTransformer('Google-10000-English.txt', use_cuda=False)
-    ib, tb = data_transformer.mini_batches(batch_size=10)
-    print("B0-0, Inputs")
-    print(ib[0][0], tb[0][1])
 
-    print("B0-0, Targets")
-    print(ib[0][0], tb[0][1])
+    for ib, tb in data_transformer.mini_batches(batch_size=3):
+        print("B0-0")
+        print(ib, tb)
+        break
