@@ -8,8 +8,8 @@ from tqdm import tqdm
 
 class ModelWrapper(object):
     
-    def train(self, model, data_loader, 
-              device='cuda:0', num_epoch=10, learning_rate=1e-3, early_stopping_rounds=5):
+    def train(self, model, train_data_loader, dev_data_loader,
+              device='cuda:0', num_epoch=10, learning_rate=1e-3, early_stopping_rounds=5, best_checkpoint_path="best_model.pt"):
         
         # initialization
         model.to(device)
@@ -21,8 +21,8 @@ class ModelWrapper(object):
         # training loop
         for epoch in range(num_epoch):
             # training and validation
-            train_loss, train_acc = self._train_loop(model, data_loader, optimizer)
-            dev_loss, dev_acc = self._eval_loop(model, data_loader)
+            train_loss, train_acc = self._train_loop(model, train_data_loader, optimizer)
+            dev_loss, dev_acc = self._eval_loop(model, dev_data_loader)
             dev_loss = np.mean(dev_loss)
             
             print("Epoch {}: train-loss: {:.4f}\t train-acc: {:.4f}\t dev-loss: {:.4f}\t dev-acc: {:.4f}".format(
@@ -32,12 +32,15 @@ class ModelWrapper(object):
             if best_dev_loss > dev_loss:
                 best_dev_loss = dev_loss
                 early_stopping_ctr = 0
+                torch.save(model.state_dict(), best_checkpoint_path)
             else:
                 early_stopping_ctr += 1
             
             if early_stopping_ctr >= early_stopping_rounds:
                 print("Eopch {}: Early stop.".format(epoch+1))
                 break
+
+        model.load_state_dict(torch.load(best_checkpoint_path))
             
     def _train_loop(self, model, data_loader, optimizer):
         rec_loss, rec_acc = [], []
