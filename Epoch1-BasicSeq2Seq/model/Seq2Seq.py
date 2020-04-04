@@ -18,9 +18,9 @@ class Seq2Seq(nn.Module):
         decoder_outputs, decoder_hidden = self.decoder.forward(context_vector=encoder_hidden, targets=targets)
         return decoder_outputs, decoder_hidden
 
-    def evaluation(self, inputs):
+    def evaluate(self, inputs):
         input_vars, input_lengths = inputs
         encoder_outputs, encoder_hidden = self.encoder(input_vars, input_lengths)
-        decoded_sentence = self.decoder.evaluation(context_vector=encoder_hidden)
+        decoded_sentence = self.decoder.evaluate(context_vector=encoder_hidden)
         return decoded_sentence
 

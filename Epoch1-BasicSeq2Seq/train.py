@@ -25,7 +25,7 @@ class Trainer(object):
         # optimizer setting
         self.learning_rate = learning_rate
         self.optimizer= torch.optim.Adam(self.model.parameters(), lr=learning_rate)
-        self.criterion = torch.nn.NLLLoss(ignore_index=self.PAD_ID, size_average=True)
+        self.criterion = torch.nn.NLLLoss(ignore_index=self.PAD_ID, reduction='mean')
 
         self.checkpoint_name = checkpoint_name
 
@@ -48,7 +48,7 @@ class Trainer(object):
                 # logging
                 step += 1
                 if step % 50 == 0:
-                    print("Step:", step, "loss of char: ", cur_loss.data[0])
+                    print("Step:", step, "char-loss: ", cur_loss.data.numpy())
                     self.save_model()
                 cur_loss.backward()
 
@@ -78,7 +78,7 @@ class Trainer(object):
         print("Model has been saved as %s.\n" % self.checkpoint_name)
 
     def load_model(self):
-        self.model.load_state_dict(torch.load(self.checkpoint_name))
+        self.model.load_state_dict(torch.load(self.checkpoint_name, map_location='cpu'))
         print("Pretrained model has been loaded.\n")
 
     def tensorboard_log(self):
@@ -91,7 +91,7 @@ class Trainer(object):
 
         # transform word to index-sequence
         eval_var = self.data_transformer.evaluation_batch(words=words)
-        decoded_indices = self.model.evaluation(eval_var)
+        decoded_indices = self.model.evaluate(eval_var)
         results = []
         for indices in decoded_indices:
             results.append(self.data_transformer.vocab.indices_to_sequence(indices))

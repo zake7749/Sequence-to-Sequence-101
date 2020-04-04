@@ -15,7 +15,7 @@ class VanillaDecoder(nn.Module):
         self.embedding = nn.Embedding(output_size, hidden_size)
         self.gru = nn.GRU(hidden_size, hidden_size)
         self.out = nn.Linear(hidden_size, output_size)
-        self.log_softmax = nn.LogSoftmax()  # work with NLLLoss = CrossEntropyLoss
+        self.log_softmax = nn.LogSoftmax(dim=-1)  # work with NLLLoss = CrossEntropyLoss
 
         self.max_length = max_length
         self.teacher_forcing_ratio = teacher_forcing_ratio
@@ -66,7 +66,7 @@ class VanillaDecoder(nn.Module):
 
         return decoder_outputs, decoder_hidden
 
-    def evaluation(self, context_vector):
+    def evaluate(self, context_vector):
         batch_size = context_vector.size(1) # get the batch size
         decoder_input = Variable(torch.LongTensor([[self.sos_id] * batch_size]))
         decoder_hidden = context_vector
@@ -112,5 +112,5 @@ class VanillaDecoder(nn.Module):
 
         for b in range(batch_size):
             top_ids = self._decode_to_index(decoder_outputs[b])
-            decoded_indices.append(top_ids.data[0])
+            decoded_indices.append(top_ids.data[0].cpu().numpy())
         return decoded_indices
